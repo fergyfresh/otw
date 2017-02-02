@@ -1,7 +1,7 @@
 # README
 
 Start of Base Rails app with Users and API.
-API Endpoints are <base-url>/v1/users for example
+API Endpoints are pure-mountain-44901.herokuapp.com/v1/users for example
 
 ```
                   Prefix Verb   URI Pattern                    Controller#Action
