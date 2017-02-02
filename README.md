@@ -3,6 +3,7 @@
 Start of Base Rails app with Users and API.
 API Endpoints are <base-url>/v1/users for example
 
+```
                   Prefix Verb   URI Pattern                    Controller#Action
         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
             user_session POST   /users/sign_in(.:format)       devise/sessions#create
@@ -27,3 +28,4 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                          PATCH  /v1/users/:id(.:format)        api/v1/users#update
                          PUT    /v1/users/:id(.:format)        api/v1/users#update
                          DELETE /v1/users/:id(.:format)        api/v1/users#destroy
+```
