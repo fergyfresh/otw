@@ -2,13 +2,17 @@
 <html>
   <head>
     <title>Otw</title>
-    <%= csrf_meta_tags %>
+		<link href="//cdn.muicss.com/mui-0.9.9-rc2/css/mui.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdn.muicss.com/mui-0.9.9-rc2/js/mui.min.js"></script>
+
+		<%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+		<%= yield %>
+
   </body>
 </html>
