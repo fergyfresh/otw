@@ -14,8 +14,13 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
-	config.omniauth :facebook, "1171545116198339", "009c6bbd685c863574cf8f5714ea5fe3", 
-					        callback_url: "http://localhost:3000/users/auth/facebook/callback"
+	if Rails.env.production?
+		config.omniauth :facebook, "1171545116198339", "009c6bbd685c863574cf8f5714ea5fe3", 	
+						        callback_url: "http://nameless-woodland-24908.herokuapp.com/users/auth/facebook/callback"
+	else	
+		config.omniauth :facebook, "1171545116198339", "009c6bbd685c863574cf8f5714ea5fe3", 
+						        callback_url: "http://localhost:3000/users/auth/facebook/callback"
+	end
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
