@@ -1,2 +1,14 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Homepage</h1>
+
+<ul>
+<% flash.each do |key, msg| %>
+  <%= content_tag :li, msg, id: key %>
+<% end %>
+</ul>
+
+<% if current_user %>
+  Signed in as <strong><%= current_user.email %></strong>!
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+<% end %>
