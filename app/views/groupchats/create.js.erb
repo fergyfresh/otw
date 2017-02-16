@@ -1,0 +1,3 @@
+$("input#groupchat_topic").val(" ")
+$("#groupchat-errors").html(" ")
+$("#groupchat-index").append('<li><%= link_to @groupchat.topic, groupchat_path(@groupchat) %></li>')

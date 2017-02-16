@@ -8,7 +8,8 @@
 
 <% if current_user %>
   Signed in as <strong><%= current_user.email %></strong>!
-  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+	<%= link_to "Groups", groupchats_path %>
+	<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <% else %>
   <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
 <% end %>

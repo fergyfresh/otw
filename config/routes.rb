@@ -2,6 +2,11 @@ Rails.application.routes.draw do
 		
   get 'home/index'
 
+  mount ActionCable.server => '/cable'
+
+  resources :groupchats, param: :slug
+  resources :messages
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   scope module: 'api' do

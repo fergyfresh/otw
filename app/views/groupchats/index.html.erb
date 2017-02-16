@@ -1,0 +1,17 @@
+<div class="row col-md-8 col-md-offset-2" id="groupchat-title">
+  <h1>Groups</h1>
+</div>
+
+<div class="row col-md-8 col-md-offset-2" id="groupchats">
+  <%= render partial: 'groupchat_form', locals: {groupchat: @groupchat} %>
+  <div id="groupchat-errors">
+    
+  </div>
+    <ul id="groupchat-index"> 
+  <% if @groupchats.any? %>
+      <%= render @groupchats%>
+  <%else %>
+    </ul>
+    <p>Be the first one of your friends to make a group!</p>
+  <% end %>
+</div>
