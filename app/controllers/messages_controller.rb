@@ -4,14 +4,14 @@ class MessagesController < ApplicationController
     message = Message.new(message_params)
     message.user = current_user
     if message.save
-      ActionCable.server.broadcast 'messages',
+      ActionCable.server.broadcast "messages_#{message.groupchat_id}_channel",
         message: message.content,
         user: message.user.email
       head :ok
     end
   end
-	
-	private
+
+  private
 
     def message_params
       params.require(:message).permit(:content, :groupchat_id)
