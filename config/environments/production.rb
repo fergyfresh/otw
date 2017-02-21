@@ -10,6 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+	config.middleware.use Letsencrypt::Middleware
 	config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
 
   # Full error reports are disabled and caching is turned on.
