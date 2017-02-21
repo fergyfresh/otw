@@ -35,7 +35,6 @@ gem 'has_friendship'
 
 gem 'active_model_serializers'
 gem 'rack-cors'
-gem 'rack-attack'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
