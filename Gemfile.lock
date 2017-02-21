@@ -140,8 +140,6 @@ GEM
     pg (0.19.0)
     puma (3.7.0)
     rack (2.0.1)
-    rack-attack (5.0.1)
-      rack
     rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -230,7 +228,6 @@ DEPENDENCIES
   pg
   platform-api!
   puma (~> 3.0)
-  rack-attack
   rack-cors
   rails (~> 5.0.1)
   rails_12factor
