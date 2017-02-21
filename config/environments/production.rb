@@ -10,6 +10,8 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+	config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -57,9 +59,9 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "otw_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  config.action_cable.allowed_request_origins = ['https://nameless-woodland-24908.herokuapp.com', 'http://nameless-woodland-24908.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://pickbillyup.com', 'http://pickbillyup.com']
 
-  config.web_socket_server_url = "wss://nameless-woodland-24908.herokuapp.com/cable"
+  config.web_socket_server_url = "wss://pickbillyup.com/cable"
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

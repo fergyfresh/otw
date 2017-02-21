@@ -45,6 +45,8 @@ gem 'rack-attack'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -59,6 +61,7 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
+	gem 'letsencrypt-rails-heroku'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
