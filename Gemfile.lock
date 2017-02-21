@@ -1,6 +1,16 @@
+GIT
+  remote: https://github.com/jalada/platform-api
+  revision: 4a06e57bd32d805248f3b8e1358ed4833296c659
+  branch: master
+  specs:
+    platform-api (0.8.0)
+      heroics (~> 0.0.17)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    acme-client (0.4.1)
+      faraday (~> 0.9, >= 0.9.1)
     actioncable (5.0.1)
       actionpack (= 5.0.1)
       nio4r (~> 1.2)
@@ -65,6 +75,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
+    excon (0.55.0)
     execjs (2.7.0)
     faraday (0.10.1)
       multipart-post (>= 1.2, < 3)
@@ -74,6 +85,10 @@ GEM
       rails (>= 4.0.0, < 5.1.0)
       stateful_enum
     hashie (3.5.3)
+    heroics (0.0.19)
+      erubis (~> 2.0)
+      excon
+      multi_json (>= 1.9.2)
     i18n (0.8.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -88,6 +103,9 @@ GEM
     jsonapi-parser (0.1.1.beta3)
     jsonapi-renderer (0.1.1.beta1)
     jwt (1.5.6)
+    letsencrypt-rails-heroku (1.0.0)
+      acme-client (~> 0.4.0)
+      platform-api
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -207,8 +225,10 @@ DEPENDENCIES
   has_friendship
   jbuilder (~> 2.5)
   jquery-rails
+  letsencrypt-rails-heroku
   omniauth-facebook
   pg
+  platform-api!
   puma (~> 3.0)
   rack-attack
   rack-cors
