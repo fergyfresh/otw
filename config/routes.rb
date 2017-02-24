@@ -11,17 +11,17 @@ Rails.application.routes.draw do
 
   scope module: 'api' do
     namespace :v1 do
-	    resources :users
-		end
-	end
+      resources :users
+    end
+  end
 
-	devise_scope :user do
-  	authenticated :user do
-    	root 'home#index', as: :authenticated_root
-  	end
+  devise_scope :user do
+    authenticated :user do
+      root 'home#index', as: :authenticated_root
+    end
 
- 		unauthenticated do
-   	 	root 'devise/sessions#new', as: :unauthenticated_root
-  	end
-	end
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
 end
