@@ -1,4 +1,4 @@
-// app/assets/javascripts/channels/chatrooms.js
+// app/assets/javascripts/channels/groupchats.js
 
 //= require cable
 //= require_self
@@ -6,4 +6,4 @@
 
 this.App = {};
 
-App.cable = ActionCable.createConsumer();  
+App.cable = ActionCable.createConsumer("/cable");  
