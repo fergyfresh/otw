@@ -1,5 +1,11 @@
 <h2>Sign up</h2>
 
+<script text="javascript">
+document.addEventListener('turbolinks:load', function() {
+  componentHandler.upgradeDom();
+});
+</script>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 

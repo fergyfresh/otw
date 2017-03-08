@@ -1,5 +1,11 @@
 <h2>Log in</h2>
 
+<script text="javascript">
+document.addEventListener('turbolinks:load', function() {
+  componentHandler.upgradeDom();
+});
+</script>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <%= f.email_field :email, autofocus: true, class: "mdl-textfield__input" %>
