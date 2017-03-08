@@ -3,26 +3,23 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.email_field :email, autofocus: true, class: "mdl-textfield__input" %>
+    <%= f.label :email, class: "mdl-textfield__label" %>
+	</div>
+  <br/>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.password_field :password, autocomplete: "off", class: "mdl-textfield__input" %>
+    <%= f.label :password, class: "mdl-textfield__label" %>
+	</div>
+  <br/>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "mdl-textfield__input" %>
+    <%= f.label :password_confirmation, class: "mdl-textfield__label" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+	
+	<div class="actions">
+    <%= f.submit "Sign up", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
   </div>
 <% end %>
 
