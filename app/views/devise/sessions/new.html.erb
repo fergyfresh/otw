@@ -18,8 +18,8 @@ document.addEventListener('turbolinks:load', function() {
   </div>
   <br/>
   <% if devise_mapping.rememberable? -%>
-    <div>
-      <%= f.check_box :remember_me, class: "mdl-checkbox__input mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect", checked: true %>
+    <div class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+      <%= f.check_box :remember_me, class: "mdl-checkbox__input", checked: true %>
       <%= f.label :remember_me, class: "mdl-checkbox__label" %>
     </div>
   <% end -%>
