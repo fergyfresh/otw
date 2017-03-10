@@ -3,5 +3,20 @@
   <%= f.text_area :content, class: "form-control", data: {textarea: "message"} %>
 
   <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
-  <%= f.submit "send", class: "btn btn-primary", style: "display: none", data: {send: "message"} %>
+  <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
+	<button type="button" onclick="getLocation()" alignment="right">Get My Location</button>
 <% end %>
+
+<script>
+function getLocation() {
+  if (navigator.geolocation) {
+	  navigator.geolocation.getCurrentPosition(showPosition);
+	} else {
+    document.getElementById("message_content").value = "Geolocation is not supported by this browser.";
+  }
+}	
+function showPosition(position) {
+				    document.getElementById("message_content").value = "Latitude: " + position.coords.latitude + 
+										    "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
