@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216013135) do
+ActiveRecord::Schema.define(version: 20170324111544) do
 
   create_table "friendships", force: :cascade do |t|
     t.string   "friendable_type"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 20170216013135) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_identities_on_user_id"
+  end
+
+  create_table "memberships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "groupchat_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["groupchat_id"], name: "index_memberships_on_groupchat_id"
+    t.index ["user_id"], name: "index_memberships_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
