@@ -20,8 +20,10 @@ class GroupchatsController < ApplicationController
   def create
     @groupchat = Groupchat.new(groupchat_params)
     @groupchat.users << current_user
-    for user_id in params[:users] do
-      @groupchat.users << User.where(:id => user_id)
+    for user_id in members_params do
+      puts user_id
+      @user = User.where(:id => user_id)
+      @groupchat.users << @user
     end
 
     if @groupchat.save
@@ -52,7 +54,7 @@ class GroupchatsController < ApplicationController
   private
 
     def groupchat_params
-      params.require(:groupchat).permit(:topic, :users => [])
+      params.require(:groupchat).permit(:topic)
     end
 
     def members_params
