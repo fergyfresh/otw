@@ -3,6 +3,8 @@
     <div class="input-group">
       <span class="input-group-addon">topic:</span>
       <%= f.text_field :topic, class: "form-control"%>
+      <span class="input-group-addon">members:</span>
+      <%= f.collection_select :members, @users, :id, :email, {:multiple => true} %>
     </div>
     <%= f.submit class: "btn btn-primary", id: "create-groupchat" %>
   <% end %>
