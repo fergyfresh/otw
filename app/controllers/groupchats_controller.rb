@@ -10,6 +10,7 @@ class GroupchatsController < ApplicationController
       flash[:notice] = nil
     end
     @groupchat = Groupchat.new
+    @users = User.all
   end
 
   def edit
@@ -18,6 +19,11 @@ class GroupchatsController < ApplicationController
 
   def create
     @groupchat = Groupchat.new(groupchat_params)
+    @groupchat.users << current_user
+    for user_id in member_params do
+      @groupchat.users << User.where(:id => user_id)
+    end
+
     if @groupchat.save
       respond_to do |format|
         format.html { redirect_to @groupchat }
@@ -47,5 +53,9 @@ class GroupchatsController < ApplicationController
 
     def groupchat_params
       params.require(:groupchat).permit(:topic)
+    end
+
+    def member_params
+      params.require(:groupchat).permit(:members => [])
     end
 end
