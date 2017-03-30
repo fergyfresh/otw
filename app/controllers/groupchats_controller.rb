@@ -53,7 +53,7 @@ class GroupchatsController < ApplicationController
   private
 
     def groupchat_params
-      params.require(:groupchat).permit(:topic, :users => [])
+      params.require(:groupchat).permit(:topic, {:users => []})
     end
 
     def members_params
