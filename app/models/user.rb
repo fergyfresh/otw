@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :messages
-  has_many :groupchats, :through => :memberships, dependent: :destroy
+  has_many :memberships, dependent: :destroy
+  has_many :groupchats, :through => :memberships
 
   devise :database_authenticatable, :registerable, 
          :recoverable, :rememberable, :trackable, :validatable,
