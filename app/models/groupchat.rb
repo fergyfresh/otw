@@ -1,7 +1,6 @@
 class Groupchat < ApplicationRecord
   has_many :messages, dependent: :destroy
-  has_many :memberships, dependent: :destroy
-  has_many :users, :through => :memberships
+  has_many :users, :through => :membrships, dependent: :destroy
   validates :topic, presence: true, uniqueness: true, case_sensitive: false
   before_validation :sanitize, :slugify
 
