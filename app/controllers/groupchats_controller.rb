@@ -30,7 +30,7 @@ class GroupchatsController < ApplicationController
       respond_to do |format|
         flash[:notice] = {error: ["a chatroom with this topic already exists"]}
         format.html { redirect_to new_groupchat_path }
-        format.js { render template: 'groupchats/groupchat_error.js.erb'} 
+        format.js { render template: 'groupchats/groupchat_error.js.erb'}
       end
     end
   end
