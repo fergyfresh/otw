@@ -14,8 +14,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-          	<li><%= link_to "Home", authenticated_root_path %></li>
-						<li><%= link_to "Map", map_path %></li>
+            <li><%= link_to "Home", authenticated_root_path %></li>
+	    <li><%= link_to "Map", map_path %></li>
             <li><%= link_to "Users", users_path %></li>
             <li><%= link_to "Settings", edit_user_path(current_user) %></li>
           <% else %>
