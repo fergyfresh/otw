@@ -13,7 +13,7 @@ $(document).on('turbolinks:load', function() {
   App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
     received: function(data) {
       if (data.message.includes("LatitudeLongitude:")) {
-        locations[data.user] = data.message.split(";")[0];
+        locations[data.user] = data.message.split(";").slice(1, 3);
         return;
       } else {
         $("#messages").removeClass('hidden');
