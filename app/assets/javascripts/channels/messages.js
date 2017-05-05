@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() {
   groupchatId = $('input#message_groupchat_id').val();
-  locations = {}
+  locations = {};
   var map = L.map('map').setView([41.4000000, -72.1000000], 13);
   // load a tile layer
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
