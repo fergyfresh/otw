@@ -4,7 +4,7 @@
 
   <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
   <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
-  <button type="button" onclick="getLocation()" alignment="right">Get My Location</button>
+  <button type="button" onclick="getLocation()" alignment="right">Send My Location</button>
 <% end %>
 
 <script>
@@ -17,6 +17,10 @@ function getLocation() {
 }	
 function showPosition(position) {
   document.getElementById("message_content").value = "LatitudeLongitude;" + position.coords.latitude + 
-        ";" + position.coords.longitude; 
+    ";" + position.coords.longitude; 
+  $('[data-send="message"]').click();
+  $('[data-textarea="message"]').val("")
+  return false;
 }
+
 </script>

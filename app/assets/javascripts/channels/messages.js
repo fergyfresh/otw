@@ -1,19 +1,21 @@
 $(document).on('turbolinks:load', function() {
   groupchatId = $('input#message_groupchat_id').val();
   locations = {};
-  var map = L.map('map').setView([41.4000000, -72.1000000], 13);
+  var map = L.map('map').setView([0, 0], 13);
   // load a tile layer
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-      maxZoom: 17,
-      minZoom: 9
     }).addTo(map);
   
   App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
     received: function(data) {
-      if (data.message.includes("LatitudeLongitude:")) {
-        locations[data.user] = data.message.split(";").slice(1, 3);
+      if (data.message.includes("LatitudeLongitude;")) {
+        if (locations[data.user] === undefined) {
+          locations[data.user] = L.marker(data.message.split(";").slice(1, 3)).addTo(map).bindPopup(data.user);
+        } else {
+          locations[data.user].setLatLng(data.message.split(";").slice(1, 3));
+        }
         return;
       } else {
         $("#messages").removeClass('hidden');
