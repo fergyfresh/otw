@@ -8,13 +8,24 @@
 <% end %>
 
 <script>
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
 function getLocation() {
   if (navigator.geolocation) {
-	  navigator.geolocation.getCurrentPosition(showPosition);
+	  navigator.geolocation.getCurrentPosition(showPosition, error, options);
 	} else {
     document.getElementById("message_content").value = "Geolocation is not supported by this browser.";
   }
-}	
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+};
+
 function showPosition(position) {
   document.getElementById("message_content").value = "LatitudeLongitude;" + position.coords.latitude + 
     ";" + position.coords.longitude; 
