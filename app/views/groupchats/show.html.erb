@@ -4,7 +4,7 @@
 <div class="panel panel-default">
   <% if @groupchat.messages.any? %>
     <div class="panel-body" id="messages">
-      <%= render partial: 'messages/message', collection: @groupchat.messages%>
+      <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
     </div>
   <%else%>
     <div class="panel-body hidden" id="messages">
