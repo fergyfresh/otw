@@ -30,3 +30,22 @@
   border-radius: 5px;
   padding: 20px;
 }
+
+#groupchats ul {
+    padding: 20px;
+    list-style-type: none;
+}
+
+#groupchats li{
+  margin: 15px 15px 6px 0;
+  height:auto;
+  width:auto;
+  border-radius: 2px;
+  background-color: #006064;
+  display: block;
+}
+
+#groupchats a {
+  text-decoration: none;
+  display: block;
+}
