@@ -10,7 +10,7 @@ class GroupchatsController < ApplicationController
       flash[:notice] = nil
     end
     @groupchat = Groupchat.new
-    @users = User.all
+    @users = User.where.not(id: current_user)
   end
 
   def edit
