@@ -2,7 +2,7 @@ class GroupchatsController < ApplicationController
 
   def index
     @groupchat = Groupchat.new
-    @groupchats = policy_scope(Groupchat)
+    @groupchats = policy_scope(Groupchat).reverse_order
   end
 
   def new
