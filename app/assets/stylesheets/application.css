@@ -32,17 +32,20 @@
 }
 
 #groupchats ul {
-    padding: 20px;
-    list-style-type: none;
+  padding: 20px;
+  margin: 0 10% 0 10%;
+  list-style-type: none;
 }
 
 #groupchats li{
-  margin: 15px 15px 6px 0;
   height:auto;
   width:auto;
-  border-radius: 2px;
+  border-bottom:1.5px solid #69f0ae;
   background-color: #006064;
   display: block;
+}
+#groupchats li:last-child {
+  border-bottom: none;
 }
 
 #groupchats a {
