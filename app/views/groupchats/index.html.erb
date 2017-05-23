@@ -1,10 +1,9 @@
 <div class="row col-md-8 col-md-offset-2" id="groupchats">
   <%= render partial: 'groupchat_form', locals: {groupchat: @groupchat} %>
   <div id="groupchat-errors">
-
-
   </div>
-    <ul id="groupchat-index" "mdl-list"> 
+  
+    <ul id="groupchat-index" class="mdl-list"> 
   <% if @groupchats.any? %>
       <%= render @groupchats %>
   <%else %>
