@@ -13,7 +13,7 @@ document.addEventListener('turbolinks:load', function() {
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <%= f.label :members, class: "mdl-textfield__label" %>
-      <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, class: "mdl-textfield__input", :id, :email, {include_hidden: false}, {:multiple => true} %>
+      <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :email, {class: "mdl-textfield__input", include_hidden: false}, {:multiple => true} %>
     </div>
     <%= f.submit class: "btn btn-primary", id: "create-groupchat" %>
   <% end %>
