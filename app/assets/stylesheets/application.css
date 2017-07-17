@@ -40,12 +40,11 @@
 #groupchats li{
   height:auto;
   width:auto;
-  background-color: #006064;
   border-radius:0px;
   display: block;
   padding: 0;
 }
-#groupchats li:not(:last-child) { border-bottom:1.5px solid #69f0ae; }
+#groupchats li:not(:last-child) { border-bottom:1.5px solid #ccc; }
 
 #groupchats a {
   text-decoration: none;
