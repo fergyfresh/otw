@@ -21,6 +21,12 @@
   </head>
 
   <body>
+    <script text="javascript">
+    document.addEventListener('turbolinks:load', function() {
+          componentHandler.upgradeDom();
+    });
+    </script>
+
     <%= yield %>
   </body>
 </html>
