@@ -1,3 +1,10 @@
+<script text="javascript">
+document.addEventListener('turbolinks:load', function() {
+  componentHandler.upgradeDom();
+});
+</script>
+
+
 <div class="groupchat-form">
   <%= form_for groupchat, remote: true do |f| %>
     <div class="mdl-textfield mdl-js-textfield">
