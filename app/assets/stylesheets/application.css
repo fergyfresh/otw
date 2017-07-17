@@ -31,22 +31,22 @@
   padding: 20px;
 }
 
-#groupchats ul {
+.groupchats ul {
   padding: 20px;
   margin: 0 10% 0 10%;
   list-style-type: none;
 }
 
-#groupchats li{
+.groupchats li{
   height:auto;
   width:auto;
   border-radius:0px;
   display: block;
   padding: 0;
 }
-#groupchats li:not(:last-child) { border-bottom:1.5px solid #ccc; }
+.groupchats li:not(:last-child) { border-bottom:1.5px solid #ccc; }
 
-#groupchats a {
+.groupchats a {
   text-decoration: none;
   display: block;
   padding: 1em;
