@@ -3,11 +3,11 @@
   <div id="groupchat-errors">
   </div>
   
-    <ul id="groupchat-index" class="mdl-list"> 
+  <ul id="groupchat-index" class="mdl-list"> 
   <% if @groupchats.any? %>
       <%= render @groupchats %>
   <%else %>
-    </ul>
+  </ul>
     <p>Be the first one of your friends to make a group!</p>
   <% end %>
 </div>
