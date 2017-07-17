@@ -43,7 +43,7 @@
   border-radius:0px;
   position: relative;
 }
-#groupchats li:not(:last-child) { border-bottom:1.5px solid #ccc !important; }
+#groupchats li:not(:last-child) { border-bottom:1.5px solid #ccc; }
 
 #groupchats a {
   text-decoration: none;
