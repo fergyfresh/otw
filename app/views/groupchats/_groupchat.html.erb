@@ -1,1 +1,6 @@
-<li class="mdl-list__item"><%= link_to groupchat.topic, groupchat_path(groupchat) %></li>
+<li class="mdl-list__item mdl-list__item--two-line">
+  <span class="mdl-list__item-primary-content">
+    <span><%= link_to groupchat.topic, groupchat_path(groupchat) %></span>
+    <span class="mdl-list__item-sub-title"><%= groupchat.users.count %> Members</span>
+  </span>
+</li>
