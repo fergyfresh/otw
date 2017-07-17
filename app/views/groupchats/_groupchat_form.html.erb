@@ -8,6 +8,6 @@
       <%= f.label :members, class: "mdl-textfield__label" %>
       <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :email, {include_hidden: false}, {:class => "mdl-textfield__input", :multiple => true} %>
     </div>
-    <%= f.submit class: "btn btn-primary", id: "create-groupchat" %>
+    <span><%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored", id: "create-groupchat" %></span>
   <% end %>
 </div>
