@@ -7,12 +7,13 @@ document.addEventListener('turbolinks:load', function() {
 
 <div class="groupchat-form">
   <%= form_for groupchat, remote: true do |f| %>
-    <div class="mdl-textfield mdl-js-textfield">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <%= f.label :topic, class: "mdl-textfield__label" %>
       <%= f.text_field :topic, class: "mdl-textfield__input"%>
     </div>
-      <span class="input-group-addon">members:</span>
-      <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :email, {include_hidden: false}, {:multiple => true} %>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.label :members, class: "mdl-textfield__label" %>
+      <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, class: "mdl-textfield__input", :id, :email, {include_hidden: false}, {:multiple => true} %>
     </div>
     <%= f.submit class: "btn btn-primary", id: "create-groupchat" %>
   <% end %>
