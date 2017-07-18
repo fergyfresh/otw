@@ -14,9 +14,9 @@
  *= require_self
  */
 .mdl-cell {
-  height: 95vh;
+  height: 100vh;
   background: #d3d3d3;
-  padding: 5px;
+  padding: 0px;
 }
 
 .login_signup {
