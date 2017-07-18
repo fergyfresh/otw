@@ -23,7 +23,7 @@ $(document).on('turbolinks:load', function() {
         return;
       } else {
         $("#messages").removeClass('hidden');
-        return $('#messages').append(this.renderMessage(data));
+        return $('#messages').append(this.renderMessage(data)).scrollTop($('#messages')[0].scrollHeight);
       }
     },
     groupchat_id: function(data) {
