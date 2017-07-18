@@ -1,18 +1,18 @@
-<div class="row col-md-8 col-md-offset-2">
-  <h1><%= @groupchat.topic %></h1>
+<div>
+  <h3><%= @groupchat.topic %></h3>
 
-<div class="panel panel-default">
-  <% if @groupchat.messages.any? %>
-    <div class="panel-body" id="messages">
-      <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
-    </div>
-  <%else%>
-    <div class="panel-body hidden" id="messages">
-    </div>
-  <%end%>
+  <div class="mdl-cell--6-col mdl-cell--8-col-tablet">
+    <% if @groupchat.messages.any? %>
+      <div class="panel-body" id="messages">
+        <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
+      </div>
+    <%else%>
+      <div class="panel-body hidden" id="messages">
+      </div>
+    <%end%>
+  </div>
+
+  <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
+  <div class="mdl-cell--4-col mdl-cell--6-col-tablet" id="map"></div>
+
 </div>
-
-<%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
-</div>
-
-<div id="map"></div>
