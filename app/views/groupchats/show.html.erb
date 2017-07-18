@@ -1,4 +1,3 @@
-<h3><%= @groupchat.topic %></h3>
 <div class="demo-grid-2 mdl-grid">
   <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
     <% if @groupchat.messages.any? %>
@@ -9,9 +8,8 @@
       <div class="panel-body hidden" id="messages">
       </div>
     <%end%>
+    <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
   </div>
-
-  <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
+  
   <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone" id="map"></div>
-
 </div>
