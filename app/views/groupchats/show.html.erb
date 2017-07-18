@@ -1,7 +1,7 @@
 <div class="mdl-grid">
   <h3><%= @groupchat.topic %></h3>
 
-  <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
     <% if @groupchat.messages.any? %>
       <div class="panel-body" id="messages">
         <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
@@ -13,6 +13,6 @@
   </div>
 
   <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
-  <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet" id="map"></div>
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone" id="map"></div>
 
 </div>
