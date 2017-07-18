@@ -1,5 +1,6 @@
 $(document).on('turbolinks:load', function() {
   submitNewMessage();
+  $('#messages').scrollTop($('#messages')[0].scrollHeight)
 });
 
 function submitNewMessage(){
