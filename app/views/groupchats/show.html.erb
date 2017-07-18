@@ -1,11 +1,11 @@
 <div class="demo-grid-2 mdl-grid">
   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone">
     <% if @groupchat.messages.any? %>
-      <div id="messages">
+      <div class="messages" id="messages">
         <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
       </div>
     <%else%>
-      <div class="hidden" id="messages">
+      <div class="messages hidden" id="messages">
       </div>
     <%end%>
     <div>
