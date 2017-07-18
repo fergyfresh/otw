@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-.mdl-cell {  
+.mdl-cell {
   height: 95vh;
   background: #ccc;
   padding: 5px;
