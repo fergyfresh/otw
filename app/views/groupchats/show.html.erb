@@ -8,7 +8,7 @@
       <div class="messages hidden" id="messages">
       </div>
     <%end%>
-    <div>
+    <div class="message-input">
       <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
     </div>
   </div>
