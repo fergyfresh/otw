@@ -4,10 +4,7 @@ $(document).on('turbolinks:load', function() {
   var map = L.map('map').setView([0, 0], 13);
   var bounds = new L.LatLngBounds();
   // load a tile layer
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    }).addTo(map);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
   
   App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
     received: function(data) {
