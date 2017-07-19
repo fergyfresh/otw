@@ -22,6 +22,10 @@
   height:100%;
 }
 
+.new_message {
+  height: 11vh;
+}
+
 .send_location {
   top:3px;
   right:3px;
