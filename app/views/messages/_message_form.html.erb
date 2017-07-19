@@ -6,3 +6,7 @@
     <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
     <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
   <% end %>
+
+<script>
+  $( "#message_content" ).focus(function() {  $('#messages').scrollTop($('#messages')[0].scrollHeight) });
+</script>
