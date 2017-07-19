@@ -8,9 +8,7 @@
       <div class="messages hidden" id="messages">
       </div>
     <%end%>
-    <div class="message-input">
-      <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
-    </div>
+    <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
   </div>
   
   <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone" id="map"></div>
