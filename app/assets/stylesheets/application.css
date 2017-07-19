@@ -18,8 +18,8 @@
 .send_location {
   top:3px;
   right:3px;
-  z-index: 1;
-  position: absolute;
+  z-index: 9999 !important;
+  position: relative;
 }
 
 .messages {
