@@ -13,11 +13,10 @@
  *= require_tree .
  *= require_self
  */
-.mdl-textfield {
+.mdl-textfield-custom {
   width:auto;
-  height:auto;
+  height:11vh;
 }
-
 .send_location {
   top:3px;
   right:3px;
