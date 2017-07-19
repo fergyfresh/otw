@@ -1,11 +1,13 @@
-<%= form_for message, remote: true, authenticity_token: true do |f| %>
-  <%= f.label :your_message %>:
-  <%= f.text_area :content, class: "form-control", data: {textarea: "message"} %>
+<div class="mdl-textfield mdl-js-textfield">
+  <%= form_for message, remote: true, authenticity_token: true do |f| %>
+    <%= f.text_area :content, class: "mdl-textfield__input", data: {textarea: "message"} %>
+    <%= f.label :message, class "mdl-textfield__label" %>
 
-  <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
-  <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
-  <button type="button" onclick="getLocation()" alignment="right">Send My Location</button>
-<% end %>
+    <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
+    <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
+    <button type="button" onclick="getLocation()" alignment="right">Send My Location</button>
+  <% end %>
+</div>
 
 <script>
 var options = {
