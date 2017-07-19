@@ -13,24 +13,6 @@
  *= require_tree .
  *= require_self
  */
-.message-input {
-  height: 10vh;
-  padding: 0 5px 5px;
-  form {
-    height: 100%;
-  }
-  textarea {
-    height: 100%;
-    width: 84.5%;
-  }
-  input {
-    float: right;
-    height: 100%;
-    vertical-align: top;
-    width: 14.5%;
-  }
-}
-
 .messages {
   height: 87vh;
   overflow: scroll;
