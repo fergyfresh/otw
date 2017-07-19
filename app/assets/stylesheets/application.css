@@ -13,15 +13,6 @@
  *= require_tree .
  *= require_self
  */
-.mdl-textfield-custom {
-  width:100%;
-  height:100%;
-}
-
-.mdl-textfield__input {
-  height:100%;
-}
-
 .new_message {
   height: 11vh;
 }
