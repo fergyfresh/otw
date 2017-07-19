@@ -14,8 +14,6 @@
  *= require_self
  */
 .message-input {
-  background-color: rgba(0,0,0,0.03);
-  box-sizing: border-box;
   height: 10vh;
   padding: 0 5px 5px;
   form {
@@ -32,6 +30,7 @@
     width: 14.5%;
   }
 }
+
 .messages {
   height: 87vh;
   overflow: scroll;
