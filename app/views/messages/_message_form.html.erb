@@ -1,12 +1,5 @@
   <%= form_for message, remote: true, authenticity_token: true do |f| %>
-    <div class="mdl-textfield-custom mdl-textfield mdl-js-textfield">
-      <%= f.label :content, "Message", class: "mdl-textfield__label" %>
-      <%= f.text_area :content, class: "mdl-textfield__input", data: {textarea: "message"} %>
-    </div>
+    <%= f.text_area :content, data: {textarea: "message"}, placeholder: 'Message...' %>
     <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
     <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
   <% end %>
-
-<script>
-  $( "#message_content" ).focus(function() {  $('#messages').scrollTop($('#messages')[0].scrollHeight) });
-</script>
