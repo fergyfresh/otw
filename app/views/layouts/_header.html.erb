@@ -14,7 +14,7 @@ function myFunction() {
   <%= link_to "Home", authenticated_root_path %>
   <%= link_to "Settings", edit_user_registration_path(current_user) %>
   <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#2261;</a>
 <% else %>
   <%= link_to "Log in", unauthenticated_root_path %>
 <% end %>
