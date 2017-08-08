@@ -24,15 +24,6 @@
 }
 */
 
-.trigram {
-  width: 13px;
-  display: inline-block;
-  padding-bottom: 2px;
-  border-bottom: 3px solid;
-	border-top: 8px double;
-  border-color: #f2f2f2;
-}
-
 .topnav {
   overflow: hidden;
   background-color: #333;
