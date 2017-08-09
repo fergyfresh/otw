@@ -103,7 +103,7 @@ textarea {
 
 .messages {
   overflow-y: scroll;
-  overflow-x: wrap;
+  word-wrap: break-word;
 }
 
 .mdl-grid {
