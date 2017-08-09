@@ -24,7 +24,8 @@
 }
 */
 #map {
-  bottom:0px;
+  bottom: 0px;
+  top: 0px;
   overflow: hidden;
   position: absolute;
   display: block;
@@ -104,6 +105,7 @@ textarea {
 
 
 .messages {
+  bottom: 0px;
   overflow-y: auto;
   word-wrap: break-word;
 }
