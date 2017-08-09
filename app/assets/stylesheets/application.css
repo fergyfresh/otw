@@ -24,6 +24,8 @@
 }
 */
 #map {
+  overflow: hidden;
+  position: absolute;
   display: block;
 }
 
