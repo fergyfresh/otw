@@ -24,6 +24,7 @@
 }
 */
 #map {
+  padding-top: 40px;
   bottom: 0px;
   top: 0px;
   overflow: hidden;
@@ -113,7 +114,6 @@ textarea {
 .mdl-grid {
   padding-top: 40px;
   margin: 0px;
-  overflow: hidden;
 }
 
 .mdl-cell {
