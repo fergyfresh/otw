@@ -101,7 +101,7 @@ textarea {
 
 
 .messages {
-  overflow-y: scroll;
+  overflow-y: auto;
   word-wrap: break-word;
 }
 
