@@ -24,6 +24,10 @@
 }
 */
 
+#map {
+  display: block;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #333;
