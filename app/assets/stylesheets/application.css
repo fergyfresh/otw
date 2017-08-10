@@ -107,6 +107,7 @@ textarea {
 .messages {
   bottom: 0px;
   overflow-y: auto;
+  padding-bottom: 50px;
   word-wrap: break-word;
 }
 
