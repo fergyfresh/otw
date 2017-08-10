@@ -90,9 +90,7 @@ textarea {
   background: #fafafa;
   border: none;
   outline: none;
-  padding-left: 55px;
-  color: #666;
-  font-weight: 400;
+  padding-left: 50px;
 }
 
 .send_location {
@@ -106,7 +104,6 @@ textarea {
 
 .messages {
   bottom: 0px;
-  position: absolute;
   margin-bottom: 0px;
   overflow-y: auto;
   padding-bottom: 40px;
