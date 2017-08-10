@@ -103,8 +103,7 @@ textarea {
 
 
 .messages {
-  bottom: 0px;
-  margin-bottom: 0px;
+  height: 100%;
   overflow-y: auto;
   padding-bottom: 40px;
   word-wrap: break-word;
