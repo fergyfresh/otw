@@ -3,14 +3,13 @@
     <% if @groupchat.messages.any? %>
       <div class="messages" id="messages">
         <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
-      </div>
+ 
     <%else%>
       <div class="messages hidden" id="messages">
-      </div>
     <%end%>
-    <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
-  </div>
-  
+      <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
+    </div>
+  </div>  
   <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone" id="map">
     <button type="button" onclick="getLocation()" class="send_location">Send My Location</button>
   </div>
