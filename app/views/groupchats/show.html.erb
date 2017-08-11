@@ -1,15 +1,14 @@
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone">
-    <% if @groupchat.messages.any? %>
-      <div class="messages" id="messages">
-        <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
- 
-    <%else%>
-      <div class="messages hidden" id="messages">
-    <%end%>
-      <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
-    </div>
-  </div>  
+  <% if @groupchat.messages.any? %>
+    <div class="messages" id="messages">
+      <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
+  <% else %>
+    <div class="messages hidden" id="messages">
+  <% end %>
+    </div>
+    <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
+  </div>
   <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone" id="map">
     <button type="button" onclick="getLocation()" class="send_location">Send My Location</button>
   </div>
@@ -41,5 +40,4 @@ function showPosition(position) {
   $('[data-textarea="message"]').val("")
   return false;
 }
-
 </script>
