@@ -14,16 +14,6 @@
  *= require_self
  */
 
-/*
-.mdl-textfield-custom {
-  width:100%;
-}
-*/
-
-.new_message {
-  width: inherit;
-}
-
 */
 #map {
   top: 40px;
@@ -92,7 +82,7 @@ textarea {
   background: #fafafa;
   border: none;
   outline: none;
-  padding-left: 50px;
+  padding-left: 10px;
 }
 
 .send_location {
