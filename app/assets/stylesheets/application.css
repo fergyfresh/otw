@@ -18,10 +18,12 @@
 .mdl-textfield-custom {
   width:100%;
 }
+*/
 
 .new_message {
-  height: 11vh;
+  width: inherit;
 }
+
 */
 #map {
   top: 40px;
