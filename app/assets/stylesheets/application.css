@@ -70,7 +70,6 @@
 */
 
 textarea {
-  float: left;
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -83,6 +82,7 @@ textarea {
   border: none;
   outline: none;
   padding-left: 10px;
+  padding-right: 5px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
