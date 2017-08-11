@@ -96,6 +96,7 @@ textarea {
 
 
 .messages {
+  overflow: auto;
   top: 40px;
   position: relative;
   height: 100%;
@@ -107,7 +108,6 @@ textarea {
 }
 
 .mdl-cell {
-  overflow: auto;
   padding-top: 40px;
   padding: 0px;
 }
