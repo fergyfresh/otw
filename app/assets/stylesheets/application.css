@@ -72,20 +72,18 @@
 textarea {
   position: fixed;
   bottom: 0px;
-  left: 0px;
   width: 100%;
   height: 50px;
   z-index: 99;
   word-wrap: break-word;
-  overflow-y: auto;
-  background: #fafafa;
-  border: none;
-  outline: none;
-  padding-left: 10px;
-  padding-right: 5px;
+  background-color: #f8f8f8;
+  border: 2px solid #ccc;
+  border-radius: 4px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
+  font-size: 13px;
+  resize: none;
 }
 
 .send_location {
