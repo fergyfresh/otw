@@ -106,6 +106,7 @@ textarea {
 }
 
 .mdl-cell {
+  overflow: auto;
   padding-top: 40px;
   padding: 0px;
 }
