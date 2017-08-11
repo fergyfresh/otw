@@ -7,8 +7,10 @@
     <div class="messages hidden" id="messages">
   <% end %>
     </div>
-    <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
-  </div>
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone">
+      <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
+    </div>
+  </div>
   <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone" id="map">
     <button type="button" onclick="getLocation()" class="send_location">Send My Location</button>
   </div>
