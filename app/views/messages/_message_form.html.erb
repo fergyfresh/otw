@@ -1,5 +1,5 @@
   <%= form_for message, remote: true, authenticity_token: true do |f| %>
-    <%= f.text_area :content, data: {textarea: "message"}, placeholder: 'Message...' %>
+    <%= f.text_area :content, data: {textarea: "message"}, placeholder: 'Message...', class: "mdl-cell--4-col" %>
     <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
     <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
   <% end %>
