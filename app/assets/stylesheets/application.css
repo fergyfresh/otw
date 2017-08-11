@@ -73,11 +73,11 @@ textarea {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  width: 100%;
+  width: inherit;
   height: 50px;
   z-index: 99;
   word-wrap: break-word;
-  overflow-y: scroll;
+  overflow-y: auto;
   background: #fafafa;
   border: none;
   outline: none;
