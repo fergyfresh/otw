@@ -13,12 +13,6 @@
  *= require_tree .
  *= require_self
  */
-#map {
-  bottom: 50px;
-  top: 50px;
-  right: 0px;
-  position: absolute;
-}
 
 .topnav {
   overflow: hidden;
@@ -109,10 +103,12 @@ textarea {
 }
 
 .mdl-cell2 {
-  float: right;
+  bottom: 0px;
+  top: 50px;
+  right: 0px;
+  position: absolute;
   overflow-x: hidden;
   overflow: auto;
-  height:100vh;
   padding: 0!important;
   color: #424242;
   font-weight: bold;
