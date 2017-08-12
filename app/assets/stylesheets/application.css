@@ -69,21 +69,14 @@
 }
 */
 
+.outer {
+ position: absolute;
+ bottom: 0;
+ text-align:center;
+}
+
 textarea {
-  position: absolute;
-  bottom: 0px;
-  width: 95%;
-  height: 50px;
-  z-index: 99;
-  word-wrap: break-word;
-  background-color: #f8f8f8;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
-  font-size: 13px;
-  resize: none;
+  width:94.5%;
 }
 
 .send_location {
@@ -96,20 +89,35 @@ textarea {
 
 
 .messages {
-  overflow: auto;
-  top: 40px;
-  position: relative;
-  height: 100%;
-  word-wrap: break-word;
+  position: absolute;
+  bottom: 50px;
+  top: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .mdl-grid {
   padding: 0px!important;
 }
 
-.mdl-cell {
-  padding-top: 40px;
-  padding: 0px;
+.mdl-cell1 {
+  overflow-x: hidden;
+  overflow: auto;
+  background: #bdbdbd;
+  text-align: center;
+  color: #424242;
+  font-weight: bold;
+}
+
+.mdl-cell2 {
+  overflow-x: hidden;
+  overflow: auto;
+  height:100vh;
+  background: #bdbdbd;
+  padding: 0!important;
+  text-align: center;
+  color: #424242;
+  font-weight: bold;
 }
 
 .login_signup {
