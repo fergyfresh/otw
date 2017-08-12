@@ -103,8 +103,8 @@ textarea {
 .mdl-cell1 {
   float: left;
   overflow-x: hidden;
+  word-wrap: break-word;
   overflow: auto;
-  background: #bdbdbd;
   color: #424242;
   font-weight: bold;
 }
@@ -114,7 +114,6 @@ textarea {
   overflow-x: hidden;
   overflow: auto;
   height:100vh;
-  background: #bdbdbd;
   padding: 0!important;
   color: #424242;
   font-weight: bold;
