@@ -99,6 +99,7 @@ textarea {
   overflow-x: hidden;
   word-wrap: break-word;
   padding: 0!important;
+  width: calc(33.3333333333%);
   overflow: auto;
   color: #424242;
   font-weight: bold;
