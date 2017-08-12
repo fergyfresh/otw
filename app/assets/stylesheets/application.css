@@ -101,21 +101,21 @@ textarea {
 }
 
 .mdl-cell1 {
+  float: left;
   overflow-x: hidden;
   overflow: auto;
   background: #bdbdbd;
-  text-align: center;
   color: #424242;
   font-weight: bold;
 }
 
 .mdl-cell2 {
+  float: right;
   overflow-x: hidden;
   overflow: auto;
   height:100vh;
   background: #bdbdbd;
   padding: 0!important;
-  text-align: center;
   color: #424242;
   font-weight: bold;
 }
