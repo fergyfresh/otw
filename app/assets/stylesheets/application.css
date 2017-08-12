@@ -13,13 +13,6 @@
  *= require_tree .
  *= require_self
  */
-#map {
-  top: 40px;
-  bottom: 0px;
-  overflow: hidden;
-  position: fixed;
-  display: block;
-}
 
 .topnav {
   overflow: hidden;
