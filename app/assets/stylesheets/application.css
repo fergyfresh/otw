@@ -97,6 +97,7 @@ textarea {
   float: left;
   overflow-x: hidden;
   word-wrap: break-word;
+  padding: 0!important;
   overflow: auto;
   color: #424242;
   font-weight: bold;
@@ -107,9 +108,7 @@ textarea {
   top: 50px;
   right: 0px;
   position: absolute;
-  overflow-x: hidden;
-  overflow: auto;
-  padding: 0!important;
+  overflow: hidden;
   color: #424242;
   font-weight: bold;
 }
