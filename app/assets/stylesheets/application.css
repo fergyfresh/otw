@@ -69,6 +69,7 @@
 }
 
 textarea {
+  height: 60px;
   width:94.5%;
 }
 
@@ -83,7 +84,7 @@ textarea {
 
 .messages {
   position: absolute;
-  bottom: 50px;
+  bottom: 60px;
   top: 50px;
   padding-left: 10px;
   padding-top: 10px;
