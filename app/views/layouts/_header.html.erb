@@ -20,7 +20,7 @@ $(document).ready(function() {
 <div class="topnav" id="myTopnav">
 <% if user_signed_in? %>
   <%= link_to "Home", authenticated_root_path, style: "float:left" %>
-  <% if (0 != (params[:id] || 0)) and current_page?(controller: 'groupchats', action: 'show', id: params[:id] || 0) %>
+  <% if @groupchat.id != nil and current_page?(controller: 'groupchats', action: 'show', id: @groupchat.id) %>
     <%= link_to "Map", :url => "#", :id => "groupchats_nav" %>  
   <% end %>
   <%= link_to "Log out", destroy_user_session_path, method: "delete" %> 
