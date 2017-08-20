@@ -31,7 +31,6 @@ gem 'redis', '~> 3.0'
 
 gem 'devise'
 gem 'omniauth-facebook'
-gem 'has_friendship'
 gem 'pundit'
 gem 'active_model_serializers'
 gem 'rack-cors'
