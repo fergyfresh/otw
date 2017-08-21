@@ -37,10 +37,25 @@
   display: none;
 }
 
+#buttone {
+  display:none;
+}
 
 @media screen and (max-width: 780px) {
   #map {
     display: none;
+    width:100%;
+    height:auto;
+    top: 57px;
+    padding-top: 0px;
+  }
+  #buttone {
+    display: block;
+    z-index: 100;
+    position: relative;
+    top: 40px;
+    width: 100%;
+    border: none;
   }
 }
 
@@ -85,7 +100,7 @@ textarea {
 .messages {
   position: absolute;
   bottom: 60px;
-  top: 50px;
+  top: 70px;
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;

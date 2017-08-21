@@ -1,4 +1,7 @@
+
+
 <div class="mdl-grid">
+  <button onclick="toggleVisibility()" id="buttone">Show Map</button>
   <div class="messages mdl-cell1 mdl-cell--4-col mdl-cell--4-col-phone" id="messages">
   <% if @groupchat.messages.any? %>
     <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
@@ -37,5 +40,21 @@ function showPosition(position) {
   $('[data-send="message"]').click();
   $('[data-textarea="message"]').val("")
   return false;
+}
+
+function toggleVisibility() {
+    var x = document.getElementById('messages');
+    var y = document.getElementById('map');
+    var b = document.getElementById('buttone');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+        y.style.display = 'none';
+        b.textContent = "Show Map";
+        
+    } else {
+        x.style.display = 'none';
+        y.style.display = 'block';
+        b.textContent = "Show Messages";
+    }
 }
 </script>

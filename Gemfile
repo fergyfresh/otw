@@ -43,7 +43,7 @@ gem 'rack-cors'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
+gem 'platform-api'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
