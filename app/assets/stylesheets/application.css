@@ -46,20 +46,20 @@
     display: none;
     width:100%;
     height:auto;
-    top: 80px;
+    top: 85px;
     padding-top: 0px;
   }
   #buttone {
     display: block;
     z-index: 100;
     position: relative;
-    top: 40px;
+    top: 55px;
     width: 100%;
     border: none;
     height: 40px;
   }
   #messages {
-    top: 80px;
+    top: 85px;
     bottom: 70px;
   }
 }
