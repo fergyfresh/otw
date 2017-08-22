@@ -59,7 +59,7 @@
     height: 40px;
   }
   #messages {
-    top: 85px;
+    top: 88px;
     bottom: 70px;
   }
 }
@@ -104,11 +104,11 @@ textarea {
 
 .messages {
   position: absolute;
-  bottom: 60px;
-  top: 70px;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  bottom: 64px;
+  top: 64px;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .mdl-grid {
