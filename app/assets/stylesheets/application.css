@@ -46,14 +46,14 @@
     display: none;
     width:100%;
     height:auto;
-    top: 85px;
+    top: 96px;
     padding-top: 0px;
   }
   #buttone {
     display: block;
     z-index: 100;
     position: relative;
-    top: 55px;
+    top: 48px;
     width: 100%;
     border: none;
     height: 40px;
