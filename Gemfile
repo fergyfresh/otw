@@ -34,6 +34,8 @@ gem 'omniauth-facebook'
 gem 'pundit'
 gem 'active_model_serializers'
 gem 'rack-cors'
+gem 'google-webfonts-rails'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

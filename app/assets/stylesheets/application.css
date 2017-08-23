@@ -14,6 +14,76 @@
  *= require_self
  */
 
+body {
+  background-color: #E0E0E0;
+}
+
+.shape {
+	height: 18px;
+	width: 18px;
+	background-color: #8ABE1F;
+}
+
+.remember-me {
+	height: 20px;
+	width: 92px;
+	color: rgba(0,0,0,0.87);
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.button-text {
+	height: 16px;
+	width: 72px;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	text-align: center;
+}
+
+.button {
+        margin-top: 24px;
+        margin-left: 16px;
+	color:white;
+        background-color: #8ABE1F;
+        height: 32px;
+	width: 88px;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+}
+
+.log-in-header {
+  margin-top: 32px;
+  height: 32px;
+  width: 66px;
+  color: #417505;
+  font-family: Roboto;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.line {	
+  box-sizing: border-box;
+  height: 2.47px;
+  width: 296px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.mdl-login {
+  margin-left: 16px;
+  margin-right:16px;
+}
+
+.hint-text {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+
 .topnav {
   overflow: hidden;
   background-color: #333;
