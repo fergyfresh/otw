@@ -136,10 +136,33 @@ textarea {
   font-weight: bold;
 }
 
-.login-card-bg {    position: fixed;    height: 350px;    width: 328px;    top: 50%;    left: 50%;    -webkit-transform: translate(-50%,-50%);    -moz-transform: translate(-50%,-50%);    -ms-transform: translate(-50%,-50%);    -o-transform: translate(-50%,-50%);    transform: translate(-50%,-50%);    background-color: #FAFAFA;}
-.login-card-top {    position: relative;    height: 248px;    width: 328x;    bottom: 0;    background-color: #FAFAFA;}
-.login-card-bot {    position: relative;    height: 102px;    width: 328px;    bottom: 0;    background-color: #8ABE1F;}
-
+.login-card-bg {
+  position: fixed;
+  height: 350px;
+  width: 328px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: #FAFAFA;
+}
+.login-card-top {
+  position: relative;
+  height: 248px;
+  width: 328x;
+  bottom: 0;
+  background-color: #FAFAFA;
+}
+.login-card-bot {
+  position: relative;
+  height: 102px;
+  width: 328px;
+  bottom: 0;
+  background-color: #8ABE1F;
+}
 
 .groupchat-form {
   margin: 0 7% 0 7%;
