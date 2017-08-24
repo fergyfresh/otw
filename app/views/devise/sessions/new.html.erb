@@ -14,27 +14,23 @@ document.addEventListener('turbolinks:load', function() {
       <%= f.email_field :email, autofocus: true, class: "mdl-textfield__input line" %>
       <%= f.label :email, class: "mdl-textfield__label hint-text" %>
     </div>
-    <br/>
     <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <%= f.password_field :password, autocomplete: "off", class: "mdl-textfield__input line" %>
       <%= f.label :password, class: "mdl-textfield__label hint-text" %>
     </div>
-    <br/>
     <% if devise_mapping.rememberable? -%>
       <div class="mdl-login mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
         <%= f.check_box :remember_me, class: "mdl-checkbox__input shape", checked: true %>
         <%= f.label :remember_me, class: "mdl-checkbox__label hint-text" %>
       </div>
     <% end -%>
-    <br/>
   </div>
   
   <div class="login-card-bot">
     <div class="actions">
       <%= f.submit "Log in", class: "button button-text" %>
+      <%= render "devise/shared/links" %>
     </div>
     <% end %>
-    <br/>
-    <%= render "devise/shared/links" %>
   </div>
 </div>
