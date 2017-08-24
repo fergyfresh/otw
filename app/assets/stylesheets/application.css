@@ -19,18 +19,12 @@ body {
 }
 
 .shape {
-	height: 18px;
-	width: 18px;
 	background-color: #8ABE1F;
 }
 
 .remember-me {
-	height: 20px;
-	width: 92px;
-	color: rgba(0,0,0,0.87);
+	color: #8ABE1F;
 	font-family: Roboto;
-	font-size: 14px;
-	line-height: 20px;
 }
 
 .button-text {
@@ -64,11 +58,10 @@ body {
   line-height: 32px;
 }
 
-.line {	
+.line {
   box-sizing: border-box;
-  height: 2.47px;
+  border-bottom: 2px solid rgba(0, 0, 0, .12);
   width: 296px;
-  border: 1px solid rgba(0,0,0,0.12);
 }
 
 .mdl-login {
@@ -78,11 +71,7 @@ body {
 
 .hint-text {
   font-family: Roboto;
-  font-size: 16px;
-  line-height: 24px;
 }
-
-
 
 .topnav {
   overflow: hidden;
