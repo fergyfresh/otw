@@ -48,6 +48,19 @@ body {
 	border-radius: 2px;
 }
 
+.fb-button {
+	text-decoration: none;
+	vertical-align: center;
+	margin-top: 24px;
+	margin-right: 64px;
+	color:white;
+	background-color: #8ABE1F;
+	height: 32px;
+	width: 152px;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+}
+
 .log-in-header {
   margin-top: 32px;
   height: 32px;
