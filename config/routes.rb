@@ -9,12 +9,6 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  scope module: 'api' do
-    namespace :v1 do
-      resources :users
-    end
-  end
-
   devise_scope :user do
     authenticated :user do
       root 'groupchats#index', as: :authenticated_root
