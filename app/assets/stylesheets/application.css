@@ -48,6 +48,14 @@ body {
 	border-radius: 2px;
 }
 
+.fb-text {
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	text-align: center;
+}
+
 .fb-button {
 	text-decoration: none;
 	vertical-align: center;
