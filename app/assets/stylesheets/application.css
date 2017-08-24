@@ -38,6 +38,7 @@ body {
 }
 
 .button {
+	display: inline-block;
         margin-top: 24px;
         margin-left: 16px;
 	color:white;
@@ -68,8 +69,8 @@ body {
 }
 
 .fb-button {
-	display: inline-block;
 	margin-top: 24px;
+	display: inline-block;
 	margin-right: 64px;
 	color:white;
 	background-color: #8ABE1F;
@@ -245,9 +246,11 @@ textarea {
   width: 328x;
   bottom: 0;
   background-color: #FAFAFA;
+  border-radius: 2px;
 }
 .login-card-bot {
   position: relative;
+  border-radius: 1px;
   height: 102px;
   width: 328px;
   bottom: 0;
