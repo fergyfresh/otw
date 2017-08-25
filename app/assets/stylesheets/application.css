@@ -46,6 +46,7 @@ body {
 	width: 88px;
 	border: 1px solid #FFFFFF;
 	border-radius: 2px;
+	-webkit-appearance: none;
 }
 
 .fb-text {
