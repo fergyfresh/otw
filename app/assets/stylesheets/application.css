@@ -117,7 +117,7 @@ body {
 	position: fixed;
 	width: 100%;
 }
-.topnav a {
+.topnav a, .topnav a:active {
 	float: right;
 	display: block;
 	color: #8ABE1F;
