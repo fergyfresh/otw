@@ -84,7 +84,7 @@ body {
 .log-in-header {
 	margin-top: 32px;
 	height: 32px;
-	width: 66px;
+	width: auto;
 	color: green;
 	font-family: Roboto;
 	font-size: 24px;
