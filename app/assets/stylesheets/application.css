@@ -37,10 +37,11 @@ body {
 	text-align: center;
 }
 
-.button {
+.button {			
+	position: absolute;
 	display: inline-block;
-        margin-top: 24px;
-        margin-left: 16px;
+        top: 24px;
+        left: 16px;
         background-color: #8ABE1F;
 	color: white;
         height: 34px;
@@ -70,9 +71,10 @@ body {
 }
 
 .fb-button {
-	margin-top: 24px;
-	display: inline-block;
-	margin-right: 64px;
+	position: absolute;
+	display: inline-block; 
+	top: 24px;
+	right: 64px;
 	color:white;
 	background-color: #8ABE1F;
 	height: 32px;
