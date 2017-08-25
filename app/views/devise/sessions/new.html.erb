@@ -10,6 +10,7 @@ document.addEventListener('turbolinks:load', function() {
   <div class="login-card-top">  
   <h2 class="mdl-login log-in-header">Log in</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
     <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <%= f.email_field :email, autofocus: true, class: "mdl-textfield__input line" %>
       <%= f.label :email, class: "mdl-textfield__label hint-text" %>
