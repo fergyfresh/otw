@@ -143,6 +143,19 @@ body {
 	width: 66px;
 	color: #8ABE1F;
 }
+p.log-in-helper {
+	position:absolute;
+	right: 88px;
+	bottom: 12px;
+	margin: 0px;
+	font-size: 12px;
+	font-weight: 300;
+	line-height:16px;
+	font-family: Roboto;
+	color: rgba(0,0,0,0.87);
+	height: 16px;
+	width:auto;
+}
 
 #buttone {
 	display:none;
