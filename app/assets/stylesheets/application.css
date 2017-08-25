@@ -85,6 +85,7 @@ body {
 
 .log-in-header {
 	margin-top: 32px;
+	margin-bottom: 0px;
 	height: 32px;
 	width: auto;
 	color: green;
