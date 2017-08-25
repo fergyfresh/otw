@@ -123,6 +123,7 @@ body {
 	color: #8ABE1F;
 	text-align: center;
 	text-decoration: none;
+	line-height: 32px;
 	font-size: 14px;
 }
 .topnav a:hover {
@@ -136,6 +137,8 @@ body {
 .log-in-nav {
 	border: 1px solid #8ABE1F;
 	border-radius: 2px;
+	margin-right: 16px;
+	margin-top: 12px;
 	height: 32px;
 	width: 66px;
 	color: #8ABE1F;
