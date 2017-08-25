@@ -249,7 +249,7 @@ textarea {
 	width: 328x;
 	bottom: 0;
 	background-color: #FAFAFA;
-	border-radius: 2px;
+	border-radius: 1px;
 }
 .login-card-bot {
 	position: relative;
@@ -259,6 +259,15 @@ textarea {
 	bottom: 0;
 	background-color: #8ABE1F;
 }
+.signup-card-bot {
+	position: relative;
+	border-radius: 1px;
+	height: 80px;
+	width: 328px;
+	bottom: 0;
+	background-color: #8ABE1F;
+}
+
 
 .groupchat-form {
 	margin: 0 7% 0 7%;
