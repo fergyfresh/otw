@@ -118,18 +118,26 @@ body {
 .topnav a {
 	float: right;
 	display: block;
-	color: #f2f2f2;
+	color: #8ABE1F;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 17px;
 }
 .topnav a:hover {
-	background-color: #ddd;
- 	color: black;
+	background-color: #8ABE1F;
+ 	color: white;
 }
 .topnav .icon {
 	display: none;
+}
+
+.log-in-nav {
+	border: 1px solid #8ABE1F;
+	border-radius: 2px;
+	height: 32px;
+	width: 66px;
+	color: #8ABE1F;
 }
 
 #buttone {
