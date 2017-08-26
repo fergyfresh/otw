@@ -14,13 +14,13 @@
  *= require_self
  */
 
+body {
+	background-color: #E0E0E0;
+}
+
 ::-webkit-scrollbar {
 	width: 0px;
 	background: transparent;
-}
-
-body {
-	background-color: #E0E0E0;
 }
 
 .secondbody {
