@@ -30,9 +30,9 @@ input {
 .pbu_icon {
 	position: absolute;
 	left: 16px;
-	bottom: 12px;
-	max-height: 30px;
-	max-width: 48px;
+	bottom: 18px;
+	max-height: 20px;
+	max-width: 28px;
 	float: left;
 }
 
@@ -54,7 +54,7 @@ input {
 	width: 72px;
 	font-family: Roboto;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 700;
 	line-height: 16px;
 	text-align: center;
 }
@@ -68,7 +68,7 @@ input {
 	color: white;
         height: 34px;
 	width: 88px;
-	border: 1px solid #FFFFFF;
+	border: 1.5px solid #FFFFFF;
 	border-radius: 2px;
 	-webkit-appearance: none;
 }
@@ -76,7 +76,7 @@ input {
 .fb-text {
 	font-family: Roboto;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 700;
 	text-align: center;
 	text-decoration: none;
 	margin-left: 8px;
@@ -101,7 +101,7 @@ input {
 	background-color: #8ABE1F;
 	height: 32px;
 	width: 152px;
-	border: 1px solid #FFFFFF;
+	border: 1.5px solid #FFFFFF;
 	border-radius: 2px;
 }
 
@@ -157,11 +157,12 @@ input {
 }
 
 .log-in-nav {
-	border: 1px solid #8ABE1F;
+	border: 1.5px solid #8ABE1F;
 	border-radius: 2px;
 	margin-right: 16px;
 	margin-top: 12px;
 	height: 32px;
+	font-weight: 700;
 	width: 66px;
 	color: #8ABE1F;
 }
