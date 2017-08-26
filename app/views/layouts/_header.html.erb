@@ -25,6 +25,9 @@ function myFunction() {
       <%= image_tag "add_group_2x.png", class: "add_group" %>
     <% end %>
   <% end %>
+  <%- if controller.controller_name == 'registrations' && controller.action_name == 'edit' %>
+    <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "log-in-nav" %>
+  <% end -%>
 <% else %>
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
     <p class="log-in-helper">New here?</p>
