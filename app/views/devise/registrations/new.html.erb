@@ -5,9 +5,9 @@ document.addEventListener('turbolinks:load', function() {
 </script>
 
 <div class="login-card-bg">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <div class="login-card-top">
     <h2 class="mdl-login log-in-header">Sign up</h2>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
       <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -28,7 +28,7 @@ document.addEventListener('turbolinks:load', function() {
     <div class="actions">
       <%= f.submit "Sign up", class: "button button-text" %>
       <%= render "devise/shared/links" %>
-      <% end %>
     </div>
   </div>
+  <% end %>
 </div>

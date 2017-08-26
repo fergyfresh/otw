@@ -10,26 +10,29 @@ function myFunction() {
 </script>
 
 <div class="topnav" id="myTopnav">
+
 <%= link_to authenticated_root_path do %>
     <%= image_tag "pbu_icon.png", class: "pbu_icon" %>
 <% end %>
-<% if user_signed_in? && controller.controller_name == 'groupchats' && controller.action_name == 'index' %>
-    <p class="groups-header">Groups</p>
-<% end %>
-
 
 <% if user_signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "log-in-nav" %> 
-  <%= link_to edit_user_registration_path(current_user) do %>
-    <%= image_tag "Settings_2x.png", class: "settings_gear" %>
+  <% if controller.controller_name == 'groupchats' && controller.action_name == 'index' %>
+    <p class="groups-header">Groups</p>
+    <%= link_to edit_user_registration_path(current_user) do %>
+      <%= image_tag "account_icon_2x.png", class: "account_icon" %>
+    <% end %>
+    <%= link_to edit_user_registration_path(current_user) do %>
+      <%= image_tag "add_group_2x.png", class: "add_group" %>
+    <% end %>
   <% end %>
 <% else %>
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
     <p class="log-in-helper">New here?</p>
-    <%= link_to "Sign up", new_registration_path(resource_name), class: "log-in-nav" %>
+    <%= link_to "Sign up", new_registration_path(resource_name), class: "log-in-nav"%>
   <% else %>
     <p class="log-in-helper">Come here often?</p>
     <%= link_to "Log in", unauthenticated_root_path, class: "log-in-nav" %>
   <% end -%>
 <% end %>
+
 </div>

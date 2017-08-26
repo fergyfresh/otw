@@ -1,6 +1,6 @@
-<li class="mdl-list__item mdl-list__item--two-line">
-  <span class="mdl-list__item-primary-content">
-    <span><%= link_to groupchat.topic, groupchat_path(groupchat) %></span>
-    <span class="mdl-list__item-sub-title"><%= pluralize(groupchat.users.count, "Member") %></span>
-  </span>
+<li>
+  <div class="groupchat-container">
+    <%= link_to groupchat.topic, groupchat_path(groupchat), class: "group-name" %><br />
+    <p class="group-info"><%= pluralize(groupchat.users.count, "Member") %></p>
+  </div>
 </li>
