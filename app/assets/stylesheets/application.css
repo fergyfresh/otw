@@ -18,8 +18,30 @@ body {
 	background-color: #E0E0E0;
 }
 
+input {
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
 .shape {
 	background-color: #8ABE1F;
+}
+
+.pbu_icon {
+	position: absolute;
+	left: 16px;
+	bottom: 12px;
+	max-height: 30px;
+	max-width: 48px;
+	float: left;
+}
+
+.settings_gear {
+	position: absolute;
+	right: 99px;
+	bottom: 15px;
+	max-height: 26px;
+	max-width: 26px;
 }
 
 .remember-me {

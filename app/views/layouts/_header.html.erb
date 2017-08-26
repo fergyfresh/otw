@@ -10,10 +10,15 @@ function myFunction() {
 </script>
 
 <div class="topnav" id="myTopnav">
+<%= link_to authenticated_root_path do %>
+    <%= image_tag "pbu_icon.png", class: "pbu_icon" %>
+<% end %>
+
 <% if user_signed_in? %>
-  <%= link_to "Home", authenticated_root_path, style: "float:left" %>
-  <%= link_to "Log out", destroy_user_session_path, method: "delete" %> 
-  <%= link_to "Settings", edit_user_registration_path(current_user) %>
+  <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "log-in-nav" %> 
+  <%= link_to edit_user_registration_path(current_user) do %>
+    <%= image_tag "Settings_2x.png", class: "settings_gear" %>
+  <% end %>
 <% else %>
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
     <p class="log-in-helper">New here?</p>
