@@ -1,0 +1,422 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+body {
+	background-color: #E0E0E0;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+.secondbody {
+	background-color: #FAFAFA;
+	width: 100vw;
+	height: 100vh;
+}
+
+input {
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+.shape {
+	background-color: #8ABE1F;
+}
+
+.pbu_icon {
+	position: absolute;
+	left: 16px;
+	bottom: 18px;
+	max-height: 20px;
+	max-width: 28px;
+	float: left;
+}
+
+.add_group {
+	position: absolute;
+	right: 59px;
+	bottom: 15px;
+	max-height: 26px;
+	max-width: 26px;
+}
+
+.account_icon {
+	position: absolute;
+	right: 19px;
+	bottom: 15px;
+	max-height: 26px;
+	max-width: 26px;
+}
+
+.remember-me {
+	color: #8ABE1F;
+	font-family: Roboto;
+}
+
+.button-text {
+	height: 16px;
+	width: 72px;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	text-align: center;
+}
+
+.button {			
+	position: absolute;
+	display: inline-block;
+	top: 24px;
+	left: 16px;
+	background-color: #8ABE1F;
+	color: white;
+	height: 34px;
+	width: 88px;
+	border: 1.5px solid #FFFFFF;
+	border-radius: 2px;
+	-webkit-appearance: none;
+}
+
+.fb-text {
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 8px;
+	line-height: 32px;
+	color:white;
+}
+
+.forget {
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+	color: rgba(255,255,255,0.6);
+	font-family: Roboto;
+}
+
+.fb-button {
+	position: absolute;
+	display: inline-block;
+	top: 24px;
+	right: 64px;
+	color:white;
+	background-color: #8ABE1F;
+	height: 32px;
+	width: 152px;
+	border: 1.5px solid #FFFFFF;
+	border-radius: 2px;
+}
+
+.log-in-header {
+	margin-top: 32px;
+	margin-bottom: 0px;
+	height: 32px;
+	width: auto;
+	color: green;
+	font-family: Roboto;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.line {
+	box-sizing: border-box;
+	border-bottom: 2px solid rgba(0, 0, 0, .12);
+	width: 296px;
+}
+
+.mdl-login {
+	margin-left: 16px;
+	margin-right:16px;
+}
+.mdl-list {
+	padding: 0;
+	z-index: 1;
+}
+.hint-text {
+	font-family: Roboto;
+}
+
+.groups-header {
+	position:absolute;
+	left: 60px;
+	bottom: 22px;
+	height: 16px;
+	width: 197px;
+	margin: 0px;
+	color: #8ABE1F;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+.container {
+	position: absolute;
+	z-index: 1;
+	top: 56px;
+	bottom: 0px;
+	overflow-y: auto;
+}
+.topnav {
+	height: 56px;
+	overflow: hidden;
+	background-color: #FAFAFA;
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.24);
+	position: fixed;
+	width: 100%;
+}
+.topnav a, .topnav a:active {
+	float: right;
+	display: block;
+	color: #8ABE1F;
+	text-align: center;
+	text-decoration: none;
+	line-height: 32px;
+	font-size: 14px;
+}
+.topnav a:hover {
+	background-color: #8ABE1F;
+	color: white;
+}
+.topnav .icon {
+	display: none;
+}
+
+.log-in-nav {
+	border: 1.5px solid #8ABE1F;
+	border-radius: 2px;
+	margin-right: 16px;
+	margin-top: 12px;
+	height: 32px;
+	font-weight: 700;
+	width: 66px;
+	color: #8ABE1F;
+}
+p.log-in-helper {
+	position:absolute;
+	right: 88px;
+	bottom: 12px;
+	margin: 0px;
+	font-size: 12px;
+	font-weight: 300;
+	line-height:16px;
+	font-family: Roboto;
+	color: rgba(0,0,0,0.87);
+	height: 16px;
+	width:auto;
+}
+
+#buttone {
+	display:none;
+}
+
+@media screen and (max-width: 780px) {
+	#map {
+		display: none;
+		width:100%;
+		height:auto;
+		top: 88px;
+		padding-top: 0px;
+}
+	#buttone {
+		display: block;
+		z-index: 100;
+		position: relative;
+		top: 48px;
+		width: 100%;
+		border: none;
+		height: 40px;
+	}
+	#messages {
+		top: 88px;
+		bottom: 70px;
+	}
+}
+
+.outer {
+	position: absolute;
+	bottom: 0;
+	text-align:center;
+}
+
+textarea {
+	height: 60px;
+	width:94.5%;
+}
+
+.send_location {
+	top:3px;
+	right:3px;
+	z-index: 9999 !important;
+	position: relative;
+	float: right;
+}
+
+
+.messages {
+	position: absolute;
+	bottom: 64px;
+	top: 64px;
+	padding-left: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.mdl-grid {
+	padding: 0px!important;
+}
+
+.mdl-cell1 {
+	float: left;
+	overflow-x: hidden;
+	word-wrap: break-word;
+	padding: 0!important;
+	width: calc(33.3333333333%);
+	overflow: auto;
+	color: #424242;
+	font-weight: bold;
+}
+
+.mdl-cell2 {
+	bottom: 0px;
+	top: 50px;
+	right: 0px;
+	position: absolute;
+	overflow: hidden;
+	color: #424242;
+	font-weight: bold;
+}
+
+.login-card-bg {
+	position: fixed;
+	height: 350px;
+	width: 328px;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	background-color: #FAFAFA;
+}
+.login-card-top {
+	position: relative;
+	height: 248px;
+	width: 328x;
+	bottom: 0;
+	background-color: #FAFAFA;
+	border-radius: 1px;
+}
+.login-card-bot {
+	position: relative;
+	border-radius: 1px;
+	height: 102px;
+	width: 328px;
+	bottom: 0;
+	background-color: #8ABE1F;
+}
+.signup-card-bot {
+	position: relative;
+	border-radius: 1px;
+	height: 80px;
+	width: 328px;
+	bottom: 0;
+	background-color: #8ABE1F;
+}
+
+
+.groupchat-form {
+	margin: 0 7% 0 7%;
+}
+
+#groupchats ul {
+	margin: 0 10% 0 10%;
+	list-style: none;
+}
+
+#groupchats li{
+	height:52px;
+	width:auto;
+	display: block;
+	border-radius:0px;
+	position: relative;
+	border-bottom:1px solid rgba(0,0,0,0.12);
+	margin: 16px 16px 12px 16px;
+}
+
+#groupchats a {
+	text-decoration: none;
+	display: block;
+}
+
+#groupchats {
+	position: absolute;
+	display:inline-block;
+	width:100vw;
+}
+
+
+.group-name {
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+	display: inline;
+	width: 100%;
+	text-overflow: ellipsis;
+	height: 24px;
+	color: rgba(0,0,0,0.85);
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.group-info {
+	float: left;
+	display: block;
+	height:20px;
+	width:288px;
+	white-space: nowrap;
+	color: rbga(0,0,0,0.5);
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 20px;
+}
+.group-container {
+	width: 100%;
+	overflow: hidden;
+	z-index: 1;
+	display: block;
+}
+
+@media screen and (max-width: 600px) {
+	#groupchats ul {
+		margin: 0px;
+	}
+	.group-name {
+		max-width: 90%;
+	}
+	.group-info {
+		max-width: 86.5%;
+	}
+}
+
