@@ -13,6 +13,10 @@ function myFunction() {
 <%= link_to authenticated_root_path do %>
     <%= image_tag "pbu_icon.png", class: "pbu_icon" %>
 <% end %>
+<% if user_signed_in? && controller.controller_name == 'groupchats' && controller.action_name == 'index' %>
+    <p class="groups-header">Groups</p>
+<% end %>
+
 
 <% if user_signed_in? %>
   <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "log-in-nav" %> 

@@ -131,6 +131,20 @@ input {
 	font-family: Roboto;
 }
 
+.groups-header {
+	position:absolute;
+	left: 60px;
+	bottom: 22px;
+	height: 16px;
+	width: 197px;
+	margin: 0px;
+	color: #8ABE1F;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+}
+
 .topnav {
 	height: 56px;
 	overflow: hidden;
