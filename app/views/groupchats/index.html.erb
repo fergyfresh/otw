@@ -1,11 +1,6 @@
 <div class="secondbody">
 
 <div class="row col-md-8 col-md-offset-2 container" id="groupchats">
-  <div hidden>
-    <%= render partial: 'groupchat_form', locals: {groupchat: @groupchat} %>
-    <div id="groupchat-errors">
-    </div>
-  </div>
   <ul id="groupchat-index" class="mdl-list"> 
   <% if @groupchats.any? %>
       <%= render @groupchats %>
