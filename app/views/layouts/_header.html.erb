@@ -16,15 +16,19 @@ function myFunction() {
 <% end %>
 
 <% if user_signed_in? %>
-  <% if controller.controller_name == 'groupchats' && controller.action_name == 'index' %>
-    <p class="groups-header">Groups</p>
-    <%= link_to edit_user_registration_path(current_user) do %>
-      <%= image_tag "account_icon_2x.png", class: "account_icon" %>
+  <% if controller.controller_name == 'groupchats' %>
+    <% if controller.action_name == 'index' %>
+      <p class="groups-header">Groups</p>
+      <%= link_to edit_user_registration_path(current_user) do %>
+        <%= image_tag "account_icon_2x.png", class: "account_icon" %>
+      <% end %>
+      <%= link_to 'groupchats/new' do %>
+        <%= image_tag "add_group_2x.png", class: "add_group" %>
+      <% end %>
+    <% elsif controller.action_name == 'new' %>
+      <p class="groups-header">Create Group</p>
     <% end %>
-    <%= link_to "groupchats#new" do %>
-      <%= image_tag "add_group_2x.png", class: "add_group" %>
-    <% end %>
-  <% end %>
+  <% end %>
   <%- if controller.controller_name == 'registrations' && controller.action_name == 'edit' %>
     <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "log-in-nav" %>
   <% end -%>
