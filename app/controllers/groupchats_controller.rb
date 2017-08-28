@@ -6,9 +6,6 @@ class GroupchatsController < ApplicationController
   end
 
   def new
-    if request.referrer.split("/").last == "groupchat"
-      flash[:notice] = nil
-    end
     @groupchat = Groupchat.new
     @users = User.where.not(id: current_user)
   end
