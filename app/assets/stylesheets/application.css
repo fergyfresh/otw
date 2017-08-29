@@ -18,6 +18,43 @@ body {
 	background-color: #E0E0E0;
 }
 
+/*flash*/
+.alert-error {
+	font-family: Roboto;
+	font-weight: 500;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+	text-align: left;
+ }
+
+.alert-alert {
+	font-family: Roboto;
+	font-weight: 500;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+	text-align: left;
+ }
+
+.alert-success {
+	font-family: Roboto;
+	font-weight: 500;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+	text-align: left;
+ }
+
+.alert-notice {
+	font-family: Roboto;
+	font-weight: 500;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+	text-align: left;
+ }
+
 ::-webkit-scrollbar {
 	width: 0px;
 	background: transparent;
