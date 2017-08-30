@@ -21,7 +21,7 @@ class GroupchatsController < ApplicationController
     if @groupchat.save
       redirect_to @groupchat
     else
-      flash[:notice] = {error: ["a chatroom with this topic already exists"]}
+      flash[:notice] = "A chatroom with this topic already exists"
       redirect_to new_groupchat_path
     end
   end
