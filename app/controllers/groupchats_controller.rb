@@ -19,10 +19,16 @@ class GroupchatsController < ApplicationController
     @groupchat.users << current_user
 
     if @groupchat.save
-      redirect_to @groupchat
+      respond_to do |format|
+        format.html { redirect_to @groupchat }
+        format.js
+      end
     else
-      flash[:notice] = "A chatroom with this topic already exists"
-      redirect_to new_groupchat_path
+      respond_to do |format|
+        flash[:notice] = "A chatroom with this topic already exists"
+        format.html { redirect_to new_groupchat_path }
+        format.js { render template: 'groupchats/groupchat_error.js.erb' }
+      end
     end
   end
 
