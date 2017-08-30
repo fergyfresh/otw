@@ -1,0 +1,9 @@
+<% if flash.notice %>
+  <div class="alert alert-danger">
+      <% flash.notice.each do |type, messages|%>
+        <%messages.each do |msg|%>
+          <%=type%> <%=msg%>
+        <%end%>
+      <%end%>
+  </div>
+<%end%>
