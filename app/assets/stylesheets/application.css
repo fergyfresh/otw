@@ -32,12 +32,6 @@
   left: 16px;
 }
 
-.group-name-format {
-  position: absolute;
-  top: 28px;
-  left: 16px;
-}
-
 /*flash*/
 .alert-error {
 	font-family: Roboto;
@@ -399,7 +393,6 @@ textarea {
 	background-color: #8ABE1F;
 }
 
-
 .groupchat-form {
 	position: fixed;
 	height: 496px;
@@ -476,7 +469,6 @@ textarea {
 	display:inline-block;
 	width:100vw;
 }
-
 
 .group-name {
 	white-space: nowrap;
