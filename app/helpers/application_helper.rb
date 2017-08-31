@@ -1,6 +1,7 @@
 module ApplicationHelper
-  def current_action?(controller: 'default', action: 'default')
-    (controller == params[:controller]) and (action == params[:action])
+  # Displays object errors
+  def form_errors_for(object=nil)
+    render('shared/form_errors', object: object) unless object.blank?
   end
 
 end
