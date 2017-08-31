@@ -14,8 +14,28 @@
  *= require_self
  */
 
-body {
-	background-color: #E0E0E0;
+.mdl-textfield__input {
+  border-bottom: 2px solid rgba(0,0,0,0.12);
+}
+
+#special-label:after {
+    background-color: #FAFAFA !important;
+}
+
+.mdl-textfield.is-focused #special-label {
+	color: #FAFAFA;
+}
+
+.group-name-format {
+  position: absolute;
+  top: 28px;
+  left: 16px;
+}
+
+.group-name-format {
+  position: absolute;
+  top: 28px;
+  left: 16px;
 }
 
 ::-webkit-scrollbar {
@@ -344,7 +364,54 @@ textarea {
 
 
 .groupchat-form {
-	margin: 0 7% 0 7%;
+	position: fixed;
+	height: 496px;
+	width: 328px;
+  border-radius: 1px;
+  background-color: #FAFAFA;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.upper-create {
+  height: 192px;
+  width: 328px;
+  border-radius: 1px 1px 0 0;
+  background-color: #8ABE1F;
+  position: relative;
+  top: 0;
+}
+
+.lower-create {
+  height: 288px;
+  width: 328px;
+  position: absolute;
+  bottom: 7;
+  border-radius: 0 0 1px 1px;
+}
+
+#create-groupchat {
+  display: block;
+  position: fixed;
+  height: 32px;
+  width: 72px;
+  border: 1.5px solid #8ABE1F;
+  background-color: #FAFAFA;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  font-family: Roboto;
+  color: #8ABE1F;
+  border-radius: 2px;
+  text-transform: capitalize;
+  top: 12px;
+  right: 16px;
 }
 
 #groupchats ul {

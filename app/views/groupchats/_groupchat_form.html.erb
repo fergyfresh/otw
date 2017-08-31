@@ -1,13 +1,21 @@
-<div class="groupchat-form">
-  <%= form_for groupchat, remote: true do |f| %>
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <%= f.label :topic, class: "mdl-textfield__label" %>
-      <%= f.text_field :topic, class: "mdl-textfield__input"%>
-    </div>
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <%= f.label :members, class: "mdl-textfield__label" %>
-      <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :email, {include_hidden: false}, {:class => "mdl-textfield__input", :multiple => true} %>
-    </div>
-    <span><%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored", id: "create-groupchat" %></span>
-  <% end %>
-</div>
+<%= form_for groupchat, remote: true do |f| %>
+  <div class="groupchat-form">
+      <div class="upper-create">	
+      <div class="group-name-format">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <%= f.label :topic, 'Group Name', class: "mdl-textfield__label", id: "special-label" %>
+          <%= f.text_field :topic, class: "mdl-textfield__input" %>
+        </div>
+      </div>
+      </div>
+      <div class="lower-create">
+      <div class="group-name-format">	
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <%= f.label :members, class: "mdl-textfield__label" %>
+            <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :email, {include_hidden: false}, {:class => "mdl-textfield__input", :multiple => true} %>
+        </div>
+      </div>
+      </div>
+  </div>
+  <%= f.submit "Done", class: "mdl-button mdl-js-button mdl-button--colored", id: "create-groupchat" %>
+<% end %>
