@@ -31,6 +31,17 @@ body {
 	color: #FAFAFA;
 }
 
+.nopad {
+  padding-bottom: 4px;
+}
+
+.depad-label:after {
+    bottom: 4px;
+}
+
+
+
+
 .group-name-format {
   position: absolute;
   top: 28px;
@@ -201,6 +212,11 @@ input {
 	margin-left: 16px;
 	margin-right:16px;
 }
+
+#mdl-signup {
+  padding-bottom: 4px;
+}
+
 .mdl-list {
 	padding: 0;
 	z-index: 1;

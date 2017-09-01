@@ -17,7 +17,8 @@ Devise.setup do |config|
 
 	if Rails.env.production?
 		config.omniauth :facebook, "1171545116198339", "009c6bbd685c863574cf8f5714ea5fe3", 	
-						        callback_url: "https://www.pickbillyup.com/users/auth/facebook/callback"
+						        callback_url: "https://www.pickbillyup.com/users/auth/facebook/callback", 
+                    scope: 'email', info_fields: 'email, first_name, last_name'
 	else	
 		config.omniauth :facebook, "1171545116198339", "009c6bbd685c863574cf8f5714ea5fe3", 
 						        callback_url: "http://localhost:3000/users/auth/facebook/callback"

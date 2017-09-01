@@ -10,17 +10,21 @@ document.addEventListener('turbolinks:load', function() {
     <h2 class="mdl-login log-in-header">Sign up</h2>
       <%= devise_error_messages! %>
 
-      <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <%= f.email_field :email, autofocus: true, class: "mdl-textfield__input line" %>
-        <%= f.label :email, class: "mdl-textfield__label hint-text" %>
+      <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad" >
+        <%= f.text_field :name, class: "mdl-textfield__input line" %>
+        <%= f.label :name, class: "mdl-textfield__label hint-text depad-label" %>
       </div>
-      <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad" >
+        <%= f.email_field :email, class: "mdl-textfield__input line" %>
+        <%= f.label :email, class: "mdl-textfield__label hint-text depad-label" %>
+      </div>
+      <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
         <%= f.password_field :password, autocomplete: "off", class: "mdl-textfield__input line" %>
-        <%= f.label :password, class: "mdl-textfield__label hint-text" %>
+        <%= f.label :password, class: "mdl-textfield__label hint-text depad-label" %>
       </div>
-      <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "mdl-textfield__input line" %>
-        <%= f.label :password_confirmation, class: "mdl-textfield__label hint-text" %>
+        <%= f.label :password_confirmation, class: "mdl-textfield__label hint-text depad-label" %>
       </div>
   </div>
 

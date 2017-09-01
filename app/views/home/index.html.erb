@@ -7,7 +7,7 @@
 </ul>
 
 <% if current_user %>
-  Signed in as <strong><%= current_user.email %></strong>!
+  Signed in as <strong><%= current_user.name %></strong>!
 	<%= link_to "Groups", groupchats_path %>
 	<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <% else %>

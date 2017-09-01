@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     if message.save
       ActionCable.server.broadcast "messages_#{message.groupchat_id}_channel",
         message: message.content,
-        user: message.user.email
+        user: message.user.name
       head :ok
     end
   end
