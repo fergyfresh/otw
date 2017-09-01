@@ -12,7 +12,7 @@
       <div class="group-name-format">	
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <%= f.label :members, class: "mdl-textfield__label" %>
-            <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :name, {include_hidden: false}, {:class => "mdl-textfield__input", :multiple => true} %>
+          <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :name, {include_hidden: false}, {:class => "mdl-textfield__input", :multiple => true} %>
         </div>
       </div>
       </div>
