@@ -513,5 +513,10 @@ textarea {
 	.group-info {
 		max-width: 86.5%;
 	}
+  .groupchat-form {
+    position: fixed;
+    top:60%;
+    display: block;
+  }
 }
 
