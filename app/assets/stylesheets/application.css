@@ -32,11 +32,12 @@ body {
 }
 
 .nopad {
-  padding-bottom: 4px;
+  padding-bottom: 2px;
+  padding-top: 16px;
 }
 
 .depad-label:after {
-    bottom: 4px;
+    bottom: 2px;
 }
 
 
