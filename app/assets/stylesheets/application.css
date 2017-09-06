@@ -413,6 +413,7 @@ textarea {
 }
 
 .groupchat-form {
+  display: block;
   height: 496px;
   width: 328px;
   border-radius: 1px;
