@@ -413,14 +413,13 @@ textarea {
 }
 
 .groupchat-form {
-  position: fixed;
-	height: 496px;
-	width: 328px;
+  height: 496px;
+  width: 328px;
   border-radius: 1px;
   background-color: #FAFAFA;
   margin-top: 16px;
-  left: 50%;
-  margin-left: -164px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .upper-create {
