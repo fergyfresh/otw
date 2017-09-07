@@ -24,11 +24,19 @@ body {
 }
 
 #special-label:after {
-    background-color: #FAFAFA !important;
+  background-color: #FAFAFA !important;
 }
 
 .mdl-textfield.is-focused #special-label {
 	color: #FAFAFA;
+}
+
+#special-input {
+  border-bottom: 2px solid #FAFAFA;
+}
+
+.mdl-textfield #special-label {
+  color: rgba(255,255,255,0.7);
 }
 
 .nopad {
