@@ -246,10 +246,11 @@ input {
 }
 
 .container {
-	position: absolute;
 	z-index: 1;
 	top: 56px;
 	bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
 	overflow-y: auto;
 }
 .topnav {
@@ -425,9 +426,9 @@ textarea {
   width: 328px;
   border-radius: 1px;
   background-color: #FAFAFA;
-  margin-top: 16px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 70px;
 }
 
 .upper-create {
