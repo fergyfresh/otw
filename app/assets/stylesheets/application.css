@@ -323,6 +323,9 @@ p.log-in-helper {
 		width: 100%;
 		border: none;
 		height: 40px;
+		background-color: #8ABE1F;
+		color: #FFFFFF;
+		box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.24);								
 	}
 	#messages {
 		top: 88px;
