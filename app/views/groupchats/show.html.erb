@@ -1,7 +1,7 @@
 
 
 <div class="mdl-grid">
-  <button onclick="toggleVisibility()" id="buttone">Show Map</button>
+  <button onclick="toggleVisibility()" id="buttone">SHOW MAP</button>
   <div class="messages mdl-cell1 mdl-cell--4-col mdl-cell--4-col-phone" id="messages">
   <% if @groupchat.messages.any? %>
     <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
@@ -54,7 +54,7 @@ function toggleVisibility() {
     } else {
         x.style.display = 'none';
         y.style.display = 'block';
-        b.textContent = "Show Messages";
+        b.textContent = "SHOW MESSAGES";
     }
 }
 </script>
