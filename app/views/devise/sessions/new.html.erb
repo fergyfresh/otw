@@ -19,7 +19,7 @@ document.addEventListener('turbolinks:load', function() {
     </div>
     <% if devise_mapping.rememberable? -%>
       <div class="mdl-login mdl-checkbox mdl-js-checkbox">
-        <%= f.check_box :remember_me, class: "mdl-checkbox__input shape", checked %>
+        <%= f.check_box :remember_me, class: "mdl-checkbox__input shape", checked: "checked" %>
         <%= f.label :remember_me, class: "mdl-checkbox__label hint-text" %>
       </div>
     <% end -%>
