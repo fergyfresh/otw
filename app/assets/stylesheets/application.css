@@ -19,6 +19,41 @@ body {
   background-color: #E0E0E0;
 }
 
+.their-name {
+  padding: 0;
+  margin: 0 0 4px 23px;
+  color: rgba(0,0,0,0.5);
+  line-height: 12px;
+  font-size: 12px;
+  width: auto;
+  max-width: 240px;
+}
+.their-content {
+  display: table;
+  max-width: 240px;
+  padding: 8px;
+  margin: 0 0 12px 24px;
+  color: rgba(0,0,0,0.9);
+  background-color: #ECEBEB;
+  border-radius: 2px;
+  line-height: 20px;
+  font-size: 14px;
+}
+.my-content {
+  clear: both;
+  display: table;
+  float: right;
+  position: relative;
+  max-width: 240px;
+  padding: 8px;
+  margin: 0 24px 12px 0;
+  color: #FFFFFF;
+  background-color: #2196F3;
+  border-radius: 2px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
 .mdl-textfield__input {
   border-bottom: 2px solid rgba(0,0,0,0.12);
 }
@@ -160,6 +195,15 @@ input {
 	text-align: center;
 }
 
+.send_icon {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  right: 12px;
+  bottom: 25px;
+  float: right;
+}
+
 .button {			
 	position: absolute;
 	display: inline-block;
@@ -243,6 +287,19 @@ input {
 .groups-header {
 	position:absolute;
 	left: 60px;
+	bottom: 22px;
+	height: 16px;
+	width: 197px;
+	margin: 0px;
+	color: #8ABE1F;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+}
+.account-header {
+	position:absolute;
+	left: 48px;
 	bottom: 22px;
 	height: 16px;
 	width: 197px;
@@ -382,7 +439,7 @@ p.log-in-helper {
   
 	#messages {
 		top: 100px;
-		bottom: 70px;
+    width: 100%;
 	}
 }
 
@@ -390,11 +447,24 @@ p.log-in-helper {
 	position: absolute;
 	bottom: 0;
 	text-align:center;
+  width: 100%;
 }
 
 textarea {
-	height: 60px;
-	width:94.5%;
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  right: 0;
+  width: 75%;
+	height: 48px;
+  padding: 8px;
+  margin: 0;
+  border: 1px solid #BDBDBD;
+  border-radius: 2px;
+  resize: none;
+  font-family: Roboto;
+  font-size: 14px;
+  line-heigh: 20px;
 }
 
 .send_location {
@@ -408,8 +478,9 @@ textarea {
 
 .messages {
 	position: absolute;
-	bottom: 64px;
+	bottom: 80px;
 	top: 64px;
+  width: 100%;
 	padding-left: 8px;
 	padding-top: 8px;
 	padding-bottom: 8px;

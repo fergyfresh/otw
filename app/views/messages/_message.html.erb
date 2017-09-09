@@ -1,1 +1,8 @@
-<p><strong><%=message.user.name%>:</strong> <%=message.content%></p>
+<% if message.user != current_user %>
+  <p class="their-name"><%= message.user.name %></p>
+  <p class="their-content">
+<% else %>
+  <p class="my-content">
+<% end %>
+  <%=message.content%></p>
+

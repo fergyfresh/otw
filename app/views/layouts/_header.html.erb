@@ -46,6 +46,7 @@ function myFunction() {
   
   <%- if controller.controller_name == 'registrations' && controller.action_name == 'edit' %>
     <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "log-in-nav" %>
+    <p class="account-header">My Account</p> 
   <% end -%>
 
 <% else %>

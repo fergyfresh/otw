@@ -1,5 +1,11 @@
-  <%= form_for message, remote: true, authenticity_token: true do |f| %>
-    <%= f.text_area :content, data: {textarea: "message"}, placeholder: 'Message...' %>
-    <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
-    <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
-  <% end %>
+<%= form_for message, remote: true, authenticity_token: true do |f| %>
+  <%= f.text_area :content, data: {textarea: "message"}, placeholder: 'Tap the location to send your current location, or tap here to chat.' %>
+  <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
+  <%= f.submit "send", class: "btn btn-primary", style: "display: none;", data: {send: "message"} %>
+<% end %>
+
+<%= link_to 'javascript:void();' do %>
+  <%= image_tag "send_icon.png", class: "send_icon" %>
+<% end %>
+
+
