@@ -258,14 +258,18 @@ input {
 	position:absolute;
 	left: 48px;
 	bottom: 26px;
+  right: 140px;
 	height: 16px;
-	width: 197px;
-	margin: 0px;
+	margin: 0;
 	color: #8ABE1F;
 	font-family: Roboto;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 16px;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .container {
