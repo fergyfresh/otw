@@ -27,7 +27,14 @@ $(document).on('turbolinks:load', function() {
       return data.groupchat_id
     },
     renderMessage: function(data) {
-      return "<p> <b>" + data.user + ": </b>" + data.message + "</p>";
+      var msg = '';
+      if (data.user == gon.current_user.name) {
+        msg = "<p class='my-content'>" + data.message + "</p>";
+      } else {
+        msg = "<p class='their-name'>" + data.user + "</p>";
+        msg = msg + "<p class='their-content'>" + data.message + "</p>";
+      }
+      return msg;
     }
   });
 })

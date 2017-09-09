@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'redis', '~> 3.0'
 
+gem 'gon'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'pundit'

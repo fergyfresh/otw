@@ -41,6 +41,7 @@ class GroupchatsController < ApplicationController
   def show
     @groupchat = Groupchat.find_by(slug: params[:slug])
     @message = Message.new
+    gon.current_user = current_user;
   end
 
   private
