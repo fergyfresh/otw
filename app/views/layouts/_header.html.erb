@@ -11,8 +11,14 @@ function myFunction() {
 
 <div class="topnav" id="myTopnav">
 
-<%= link_to authenticated_root_path do %>
+<% if user_signed_in? && controller.action_name != 'index' %>
+  <%= link_to authenticated_root_path do %>
+    <%= image_tag "back_arrow.png", class: "back_arrow" %>
+  <% end %>
+<% else %>
+  <%= link_to authenticated_root_path do %>
     <%= image_tag "pbu_icon.png", class: "pbu_icon" %>
+  <% end %>
 <% end %>
 
 <% if user_signed_in? %>
@@ -27,6 +33,8 @@ function myFunction() {
       <% end %>
     <% elsif controller.action_name == 'new' %>
       <p class="groups-header">Create Group</p>
+    <% elsif controller.action_name == 'show' %>
+      <p class="groups-show"><%=  @groupchat.topic %></p>
     <% end %>
   <% end %>
   <%- if controller.controller_name == 'registrations' && controller.action_name == 'edit' %>

@@ -115,9 +115,18 @@ input {
 .pbu_icon {
 	position: absolute;
 	left: 16px;
-	bottom: 18px;
-	max-height: 20px;
+	bottom: 16px;
+	max-height: 24px;
 	max-width: 28px;
+  min-width: 12px;
+	float: left;
+}
+.back_arrow {
+	position: absolute;
+	left: 18px;
+	bottom: 16px;
+	height: 24px;
+  width: 12px;
 	float: left;
 }
 
@@ -245,6 +254,19 @@ input {
 	font-weight: bold;
 	line-height: 16px;
 }
+.groups-show {
+	position:absolute;
+	left: 48px;
+	bottom: 26px;
+	height: 16px;
+	width: 197px;
+	margin: 0px;
+	color: #8ABE1F;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+}
 
 .container {
 	z-index: 1;
@@ -312,15 +334,17 @@ p.log-in-helper {
 		display: none;
 		width:100%;
 		height:auto;
-		top: 88px;
+		top: 100px;
 		padding-top: 0px;
 }
 	#buttone {
-		display: block;
-		z-index: 100;
-		position: relative;
-		top: 48px;
-		width: 100%;
+		display: inline;
+    position: relative;
+    float: left;
+    padding: 0;
+    -webkit-appearance: none;
+    overflow: hidden;
+		width: 50%;
 		border: none;
 		height: 40px;
 		background-color: #8ABE1F;
@@ -328,10 +352,31 @@ p.log-in-helper {
     font-size: 12px;
     line-height: 12px;
 		color: #FFFFFF;
-		box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.24);								
+    border-bottom: 2px solid #FFFFFF;
 	}
+	#butttwo {
+		position: relative;
+    float: right;
+    padding: 0;
+    -webkit-appearance: none;
+		width: 50%;
+		border: none;
+		height: 40px;
+		background-color: #8ABE1F;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+		color: #FFFFFF;
+	}
+  .jerry-box {
+    width: 100%;
+    position: relative;
+    top: 56px; 
+		box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.24);								
+  }
+  
 	#messages {
-		top: 88px;
+		top: 100px;
 		bottom: 70px;
 	}
 }

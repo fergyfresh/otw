@@ -1,7 +1,10 @@
 
 <div class="secondbody">
 <div class="mdl-grid">
-  <button onclick="toggleVisibility()" id="buttone">SHOW MAP</button>
+  <div class="jerry-box">
+    <button onclick="toggleVisibility(this.id);" id="buttone" style="-webkit-appearance:none">CHAT</button>
+    <button onclick="toggleVisibility(this.id)" id="butttwo" style="-webkit-appearance:none">MAP</button>
+  </div>
   <div class="messages mdl-cell1 mdl-cell--4-col mdl-cell--4-col-phone" id="messages">
   <% if @groupchat.messages.any? %>
     <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
@@ -43,19 +46,26 @@ function showPosition(position) {
   return false;
 }
 
-function toggleVisibility() {
-    var x = document.getElementById('messages');
-    var y = document.getElementById('map');
-    var b = document.getElementById('buttone');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-        y.style.display = 'none';
-        b.textContent = "SHOW MAP";
+function toggleVisibility(id) {
+    var chat = document.getElementById('messages');
+    var map = document.getElementById('map');
+    var b1 = document.getElementById("buttone");
+    var b2 = document.getElementById("butttwo");
+    if (id === "buttone") { 
+        chat.style.display = 'block';
+        map.style.display = 'none';
+        b1.style.color = "#FFFFFF";
+        b1.style.borderBottom = "2px solid #FFFFFF"
+        b2.style.color = "rgba(255,255,255,0.6)";
+        b2.style.borderBottom = "0px solid #FFFFFF";
         
     } else {
-        x.style.display = 'none';
-        y.style.display = 'block';
-        b.textContent = "SHOW MESSAGES";
+        chat.style.display = 'none';
+        map.style.display = 'block';
+        b2.style.color = "#FFFFFF";
+        b2.style.borderBottom = "2px solid #FFFFFF";
+        b1.style.color = "rgba(255,255,255,0.6)";
+        b1.style.borderBottom = "0px solid #FFFFFF";
     }
 }
 </script>
