@@ -23,6 +23,7 @@ function myFunction() {
 
 <% if user_signed_in? %>
   <% if controller.controller_name == 'groupchats' %>
+  
     <% if controller.action_name == 'index' %>
       <p class="groups-header">Groups</p>
       <%= link_to edit_user_registration_path(current_user) do %>
@@ -31,19 +32,27 @@ function myFunction() {
       <%= link_to 'groupchats/new' do %>
         <%= image_tag "add_group_2x.png", class: "add_group" %>
       <% end %>
+      
     <% elsif controller.action_name == 'new' %>
       <p class="groups-header">Create Group</p>
+      
     <% elsif controller.action_name == 'show' %>
       <p class="groups-show"><%=  @groupchat.topic %></p>
+      <%= link_to edit_user_registration_path(current_user) do %>
+        <%= image_tag "Settings_2x.png", class: "account_icon" %>
+      <% end %>
     <% end %>
-  <% end %>
+  <% end %>
+  
   <%- if controller.controller_name == 'registrations' && controller.action_name == 'edit' %>
     <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "log-in-nav" %>
   <% end -%>
+
 <% else %>
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
     <p class="log-in-helper">New here?</p>
     <%= link_to "Sign up", new_registration_path(resource_name), class: "log-in-nav"%>
+  
   <% else %>
     <p class="log-in-helper">Come here often?</p>
     <%= link_to "Log in", unauthenticated_root_path, class: "log-in-nav" %>

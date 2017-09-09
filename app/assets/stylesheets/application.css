@@ -116,9 +116,8 @@ input {
 	position: absolute;
 	left: 16px;
 	bottom: 16px;
-	max-height: 24px;
-	max-width: 28px;
-  min-width: 12px;
+	height: 23px;
+	width: 32px;
 	float: left;
 }
 .back_arrow {
@@ -126,24 +125,24 @@ input {
 	left: 18px;
 	bottom: 16px;
 	height: 24px;
-  width: 12px;
+  width: 13.5px;
 	float: left;
 }
 
 .add_group {
 	position: absolute;
 	right: 59px;
-	bottom: 15px;
-	max-height: 26px;
-	max-width: 26px;
+	bottom: 13px;
+	max-height: 30px;
+	max-width: 30px;
 }
 
 .account_icon {
 	position: absolute;
 	right: 19px;
-	bottom: 15px;
-	max-height: 26px;
-	max-width: 26px;
+	bottom: 13px;
+	max-height: 30px;
+	max-width: 30px;
 }
 
 .remember-me {
@@ -257,9 +256,9 @@ input {
 .groups-show {
 	position:absolute;
 	left: 48px;
-	bottom: 26px;
+	bottom: 24px;
   right: 140px;
-	height: 16px;
+	height: 18px;
 	margin: 0;
 	color: #8ABE1F;
 	font-family: Roboto;
@@ -372,6 +371,8 @@ p.log-in-helper {
     line-height: 12px;
 		color: #FFFFFF;
 	}
+  #buttone:focus { outline:0; } 
+  #butttwo:focus { outline:0; } 
   .jerry-box {
     width: 100%;
     position: relative;
