@@ -20,6 +20,7 @@ body {
 }
 
 .their-name {
+  clear: both;
   padding: 0;
   margin: 0 0 4px 23px;
   color: rgba(0,0,0,0.5);
@@ -29,6 +30,7 @@ body {
   max-width: 240px;
 }
 .their-content {
+  clear: both;
   display: table;
   max-width: 240px;
   min-width: 40px;
