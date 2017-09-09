@@ -31,6 +31,7 @@ body {
 .their-content {
   display: table;
   max-width: 240px;
+  min-width: 40px;
   padding: 8px;
   margin: 0 0 12px 24px;
   color: rgba(0,0,0,0.9);
@@ -45,6 +46,7 @@ body {
   float: right;
   position: relative;
   max-width: 240px;
+  min-width: 40px;
   padding: 8px;
   margin: 0 24px 12px 0;
   color: #FFFFFF;
