@@ -455,7 +455,7 @@ p.log-in-helper {
 }
 
 textarea {
-  position: absolute;
+  position: fixed;
   bottom: 12px;
   left: 16px;
   right: 0;
@@ -468,7 +468,7 @@ textarea {
   resize: none;
   font-family: Roboto;
   font-size: 14px;
-  line-heigh: 20px;
+  line-height: 20px;
 }
 
 .send_location {
