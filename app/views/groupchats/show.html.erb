@@ -10,7 +10,7 @@
     <%= render partial: 'messages/message', collection: @groupchat.messages.where.not("content LIKE ?", "%LatitudeLongitude;%")%>
   <% end %>
   </div>
-  <div class=" mdl-cell--4-col outer">
+  <div class="mdl-cell--4-col">
     <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
   </div>  
   <div class="mdl-cell2 mdl-cell--8-col mdl-cell--4-col-phone" id="map">
