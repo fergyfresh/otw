@@ -200,13 +200,16 @@ input {
 }
 
 .send_icon {
-  height: 40px;
-  width: 40px;
   position: fixed;
   right: 12px;
   bottom: 25px;
   float: right;
-  background: url(../images/send_icon.png) #f2efa8 no-repeat auto auto;
+  background-image: url(images/send_icon.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 40px;
+  width: 40px;
+  border: none;
 }
 
 .button {			
