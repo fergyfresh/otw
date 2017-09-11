@@ -204,7 +204,7 @@ input {
   right: 12px;
   bottom: 25px;
   float: right;
-  background-image: url('images/send_icon.png');
+  background-image: url("../images/send_icon.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   height: 40px;
