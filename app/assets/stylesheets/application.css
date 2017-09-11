@@ -206,6 +206,7 @@ input {
   right: 12px;
   bottom: 25px;
   float: right;
+  background: url(../images/send_icon.png);
 }
 
 .button {			
