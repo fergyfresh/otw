@@ -206,7 +206,7 @@ input {
   right: 12px;
   bottom: 25px;
   float: right;
-  background: url(../images/send_icon.png);
+  background: url(../images/send_icon.png) #f2efa8 no-repeat auto auto;
 }
 
 .button {			
