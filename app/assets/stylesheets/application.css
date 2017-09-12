@@ -204,7 +204,7 @@ input {
   right: 12px;
   bottom: 25px;
   float: right;
-  background: transparent url("assets/images/send_icon.png") 0 0 no-repeat;
+  background: transparent url("/assets/send_icon.png") 0 0 no-repeat;
   display: block;
   border: none;
   cursor: pointer;
