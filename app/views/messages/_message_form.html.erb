@@ -1,7 +1,7 @@
 <%= form_for message, remote: true, authenticity_token: true do |f| %>
   <%= f.text_area :content, data: {textarea: "message"}, placeholder: 'Tap the location to send your current location, or tap here to chat.' %>
   <%= f.hidden_field :groupchat_id, value: @groupchat.id %>
-  <%= f.submit "send", class: "send_icon", data: {send: "message"} %>
+  <%= f.submit "send", src: "images/send_icon.png", data: {send: "message"} %>
 <% end %>
 
 
