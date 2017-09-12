@@ -204,12 +204,12 @@ input {
   right: 12px;
   bottom: 25px;
   float: right;
-  background-image: url("../images/send_icon.png");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background: transparent url("../images/send_icon.png") 0 0 no-repeat
+  display: block;
+  border: none;
+  cursor: pointer;
   height: 40px;
   width: 40px;
-  border: none;
 }
 
 .button {			
