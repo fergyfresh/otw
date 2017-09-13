@@ -12,7 +12,7 @@
       </div>
       <div class="lower-create">
         <div class="group-member-format">	
-          <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :name, {include_hidden: false}, :multiple => true} %>
+          <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :name, {include_hidden: false}, {multiple: true} %>
         </div>
       </div>
   </div>
