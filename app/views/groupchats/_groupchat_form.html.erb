@@ -11,12 +11,9 @@
       </div>
       </div>
       <div class="lower-create">
-      <div class="group-name-format">	
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <%= f.label :members, class: "mdl-textfield__label" %>
-          <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :name, {include_hidden: false}, {:class => "mdl-textfield__input", :multiple => true} %>
+        <div class="group-member-format">	
+          <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :name, {include_hidden: false}, :multiple => true} %>
         </div>
-      </div>
       </div>
   </div>
   <%= f.submit "Done", class: "mdl-button mdl-js-button mdl-button--colored", id: "create-groupchat" %>
