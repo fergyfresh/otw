@@ -13,7 +13,7 @@
       <div class="lower-create">
         <div class="group-member-format">
           <ul id="special-select">
-            <%= f.hidden_field :user_ids, multiple: true %>
+            <%= f.hidden_field :user_ids, { multiple: true, value: [] } %>
             <% User.where.not(id:current_user).each do |user| %>
               <li class="groupmember-select" id=<%= user.id %> value=<%= user.id %>>
                 <%= user.name %>
