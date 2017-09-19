@@ -19,6 +19,30 @@ body {
   background-color: #E0E0E0;
 }
 
+#special-select {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.groupmember-select {
+  list-style: none;
+  padding: 12px 0 10px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  cursor: pointer;
+  height: 24px;
+  color: rgba(0,0,0,0.85);
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.selected {
+  background-color: #c8ccc5;
+}
+
 .member_label {
   color: rgba(255,255,255,0.6);
   font-size: 12px;

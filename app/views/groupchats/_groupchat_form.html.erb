@@ -1,20 +1,46 @@
 <%= form_for groupchat do |f| %>
   <div class="groupchat-form">
       <div class="upper-create">	
-      <div class="group-name-format">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <%= f.label :topic, 'Group Name', class: "mdl-textfield__label", id: "special-label" %>
-          <%= f.text_field :topic, class: "mdl-textfield__input", id: "special-input" %>
+        <div class="group-name-format">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <%= f.label :topic, 'Group Name', class: "mdl-textfield__label", id: "special-label" %>
+            <%= f.text_field :topic, class: "mdl-textfield__input", id: "special-input" %>
+          </div>
+          <label class="member_label" for="groupchat_members">Group Members</label>
+          <p class="member_list">Select contacts from the list below to add them to your private group.</p>
         </div>
-        <label class="member_label" for="groupchat_members">Group Members</label>
-        <p class="member_list">Select contacts from the list below to add them to your private group.</p>
-      </div>
       </div>
       <div class="lower-create">
-        <div class="group-member-format">	
-          <%= f.collection_select :user_ids, User.where.not(id: current_user).collect, :id, :name, {include_hidden: false}, {class: "member-select", multiple: true} %>
+        <div class="group-member-format">
+          <ul id="special-select">
+            <%= f.hidden_field :user_ids, multiple: true %>
+            <% User.where.not(id:current_user).each do |user| %>
+              <li class="groupmember-select" id=<%= user.id %> value=<%= user.id %>>
+                <%= user.name %>
+              </li>
+            <% end %>
+          </ul>
         </div>
       </div>
   </div>
   <%= f.submit "Done", class: "mdl-button mdl-js-button mdl-button--colored", id: "create-groupchat" %>
 <% end %>
+
+
+
+<script>
+var user_ids = [];
+$("#special-select li").click(function(){
+  var index = user_ids.indexOf($(this).attr("value"));
+  if (index > -1) {
+    user_ids.splice(index, 1);
+  }
+  else {
+    user_ids.push($(this).attr("value"));
+  }
+  $("#groupchat_user_ids").val(user_ids);
+  $(this).toggleClass("selected");
+});
+
+</script>
+
