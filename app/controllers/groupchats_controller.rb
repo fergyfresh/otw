@@ -15,7 +15,7 @@ class GroupchatsController < ApplicationController
   end
 
   def create
-    puts groupchat_params
+    params[:groupchat][:user_ids] = params[:groupchat][:user_ids][0].split(',')
     @groupchat = Groupchat.new(groupchat_params)
     @groupchat.users << current_user
 
@@ -48,6 +48,5 @@ class GroupchatsController < ApplicationController
   private
     def groupchat_params
       params.require(:groupchat).permit(:topic, {:user_ids => []})
-      params[:groupchat][:user_ids] = params[:groupchat][:user_ids][0].split(',')
     end
 end
