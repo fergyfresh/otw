@@ -48,6 +48,7 @@ class GroupchatsController < ApplicationController
 
     def groupchat_params
       params.require(:groupchat).permit(:topic, {:user_ids => []})
+      params[:user_ids] = params[:user_ids][0].split(',')
     end
 
 end
