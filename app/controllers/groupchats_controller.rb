@@ -15,6 +15,7 @@ class GroupchatsController < ApplicationController
   end
 
   def create
+    groupchat_params[:user_ids] = groupchat_params[:userids][0].split(',')
     @groupchat = Groupchat.new(groupchat_params)
     @groupchat.users << current_user
 
