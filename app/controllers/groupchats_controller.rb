@@ -15,6 +15,7 @@ class GroupchatsController < ApplicationController
   end
 
   def create
+    puts groupchat_params
     @groupchat = Groupchat.new(groupchat_params)
     @groupchat.users << current_user
 
