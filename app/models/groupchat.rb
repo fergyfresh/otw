@@ -4,6 +4,7 @@ class Groupchat < ApplicationRecord
   has_many :users, :through => :memberships
   validates :topic, presence: true, uniqueness: true, case_sensitive: false
   before_validation :sanitize, :slugify
+  before_save :clean_members
 
   def to_param
     self.slug
@@ -15,5 +16,9 @@ class Groupchat < ApplicationRecord
 
   def sanitize
     self.topic = self.topic.strip
+  end
+  
+  def clean_members
+    self.user_ids = self.user_ids.split(',')
   end
 end
