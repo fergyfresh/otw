@@ -3,8 +3,7 @@ class Groupchat < ApplicationRecord
   has_many :memberships, dependent: :destroy
   has_many :users, :through => :memberships
   validates :topic, presence: true, uniqueness: true, case_sensitive: false
-  before_validation :sanitize, :slugify
-  before_save :clean_members
+  before_validation :sanitize, :slugify, :clean_members
 
   def to_param
     self.slug
