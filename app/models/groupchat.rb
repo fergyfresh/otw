@@ -18,6 +18,6 @@ class Groupchat < ApplicationRecord
   end
   
   def clean_members
-    self.user_ids = self.user_ids[0].split(',')
+    self.user_ids = self.user_ids[0].split(",")
   end
 end
