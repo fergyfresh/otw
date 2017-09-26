@@ -7,6 +7,40 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};	
+getLocation();
+  
+function getLocation() {
+  if (navigator.geolocation && $(".add_location").attr("src") == "<%= asset_path('On.png') %>") {
+    navigator.geolocation.getCurrentPosition(showPosition, error, options);
+  }
+  setTimeout(getLocation, 10000);
+};
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+};
+
+function showPosition(position) {
+  document.getElementById("message_content").value = "LatitudeLongitude;" + position.coords.latitude + 
+    ";" + position.coords.longitude; 
+  $('[data-send="message"]').click();
+  $('[data-textarea="message"]').val("")
+  return false;
+};  
+  
+function toggleLocation() {
+  if ( $(".add_location").attr("src") == "<%= asset_path('Off.png') %>" ) {
+    $(".add_location").attr("src", "<%= asset_path('On.png') %>");
+  } else {
+    $(".add_location").attr("src", "<%= asset_path('Off.png') %>");
+  }
+};
 </script>
 
 <div class="topnav" id="myTopnav">
@@ -40,6 +74,9 @@ function myFunction() {
       <p class="groups-show"><%=  @groupchat.topic %></p>
       <%= link_to edit_user_registration_path(current_user) do %>
         <%= image_tag "Settings_2x.png", class: "account_icon" %>
+      <% end %>
+      <%= link_to "javascript:toggleLocation()" do %>
+        <%= image_tag "Off.png", class: "add_location" %>
       <% end %>
     <% end %>
   <% end %>

@@ -7,7 +7,7 @@
             <%= f.text_field :topic, class: "mdl-textfield__input", id: "special-input" %>
           </div>
           <label class="member_label" for="groupchat_members">Group Members</label>
-          <p class="member_list">Select contacts from the list below to add them to your private group.</p>
+          <p class="member_list" id="select_message">Select contacts from the list below to add them to your private group.</p>
         </div>
       </div>
       <div class="lower-create">
@@ -26,21 +26,32 @@
   <%= f.submit "Done", class: "mdl-button mdl-js-button mdl-button--colored", id: "create-groupchat" %>
 <% end %>
 
-
-
 <script>
 var user_ids = [];
+var user_names = [];
+var default_string = $("#select_message").text();
 $("#special-select li").click(function(){
   var index = user_ids.indexOf($(this).attr("value"));
+  var nindex = user_names.indexOf($(this).text());
   if (index > -1) {
     user_ids.splice(index, 1);
+    user_names.splice(nindex, 1);
   }
   else {
     user_ids.push($(this).attr("value"));
+    user_names.push($(this).text());
   }
   $("#groupchat_user_ids").val(user_ids);
   $(this).toggleClass("selected");
+  
+  if (user_names.length > 0) {
+    $("#select_message").text(user_names.join(", "));
+    $(".member_list").css("color", "rgba(255, 255, 255, 1.0)");
+  }
+  else {
+    $("#select_message").text(default_string);
+    $(".member_list").css("color", "rgba(255, 255, 255, 0.7)");
+  }
 });
 
 </script>
-

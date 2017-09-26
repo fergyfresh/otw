@@ -1,10 +1,10 @@
 $(document).on('turbolinks:load', function() {
   groupchatId = $('input#message_groupchat_id').val();
   locations = {};
-  var map = L.map('map').setView([0, 0], 13);
-  var bounds = new L.LatLngBounds();
+  var map = L.map('map');
+  var bounds = [];
   // load a tile layer
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
   
   App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
     received: function(data) {
@@ -15,8 +15,9 @@ $(document).on('turbolinks:load', function() {
         } else {
           locations[data.user].setLatLng(latlng).update();
         }
-        bounds.extend(latlng);
-        map.fitBounds(bounds, {padding:[50,50]});
+        bounds = Object.values(locations);
+        map.fitBounds(bounds);
+        map.panToBounds(bounds);
         return;
       } else {
         $("#messages").removeClass('hidden');

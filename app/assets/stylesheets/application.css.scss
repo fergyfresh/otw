@@ -23,7 +23,6 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  overflow-y: scroll;
 }
 
 .groupmember-select {
@@ -37,10 +36,14 @@ body {
   font-family: Roboto;
   font-size: 16px;
   line-height: 24px;
+  background-image: image-url("add_member.png");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center right 5px;
 }
 
 .selected {
-  background-color: #E0E0E0;
+  background-image: image-url("member_added.png");
 }
 
 .member_label {
@@ -224,6 +227,14 @@ input {
 	max-width: 30px;
 }
 
+.add_location {
+	position: absolute;
+	right: 56px;
+	bottom: 13px;
+	max-height: 32px;
+	max-width: 58px;
+}
+
 .account_icon {
 	position: absolute;
 	right: 19px;
@@ -394,6 +405,7 @@ input {
 	overflow-y: auto;
 }
 .topnav {
+	z-index: 101;
 	height: 56px;
 	overflow: hidden;
 	background-color: #FAFAFA;
@@ -448,13 +460,15 @@ p.log-in-helper {
 
 @media screen and (max-width: 780px) {
 	#map {
+		z-index: 1;
 		display: none;
 		width:100%;
 		height:auto;
-		top: 100px;
+		top: 96px;
 		padding-top: 0px;
 }
 	#buttone {
+		z-index: 101;
 		display: inline;
     position: relative;
     float: left;
@@ -472,6 +486,7 @@ p.log-in-helper {
     border-bottom: 2px solid #FFFFFF;
 	}
 	#butttwo {
+		z-index: 101;
 		position: relative;
     float: right;
     padding: 0;
@@ -488,6 +503,7 @@ p.log-in-helper {
   #buttone:focus { outline:0; } 
   #butttwo:focus { outline:0; } 
   .jerry-box {
+    z-index: 101;
     width: 100%;
     position: fixed;
     top: 56px; 
@@ -636,6 +652,7 @@ textarea {
   position: absolute;
   bottom: 7;
   border-radius: 0 0 1px 1px;
+  overflow-y: scroll;
 }
 
 #create-groupchat {

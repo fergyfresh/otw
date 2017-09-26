@@ -14,38 +14,11 @@
     <%= render partial: 'messages/message_form', locals: {message: @message, groupchat: @groupchat}%>
   </div>  
   <div class="mdl-cell2 mdl-cell--8-col mdl-cell--4-col-phone" id="map">
-    <button type="button" onclick="getLocation()" class="send_location">Send My Location</button>
   </div>
 </div>
 </div>
 
 <script>
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
-
-function getLocation() {
-  if (navigator.geolocation) {
-	  navigator.geolocation.getCurrentPosition(showPosition, error, options);
-	} else {
-    document.getElementById("message_content").value = "Geolocation is not supported by this browser.";
-  }
-}
-
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-};
-
-function showPosition(position) {
-  document.getElementById("message_content").value = "LatitudeLongitude;" + position.coords.latitude + 
-    ";" + position.coords.longitude; 
-  $('[data-send="message"]').click();
-  $('[data-textarea="message"]').val("")
-  return false;
-}
-
 function toggleVisibility(id) {
     var chat = document.getElementById('messages');
     var map = document.getElementById('map');
