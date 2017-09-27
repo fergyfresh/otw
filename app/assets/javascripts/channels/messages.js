@@ -23,8 +23,8 @@ $(document).on('turbolinks:load', function() {
 
         alert(vals);
         alert(bounds);
-        map.fitBounds(bounds);
-        map.panToBounds(bounds);
+        map.fitBounds(vals);
+        map.panToBounds(vals);
         return;
       } else {
         $("#messages").removeClass('hidden');
