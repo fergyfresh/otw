@@ -37,8 +37,10 @@ function showPosition(position) {
 function toggleLocation() {
   if ( $(".add_location").attr("src") == "<%= asset_path('Off.png') %>" ) {
     $(".add_location").attr("src", "<%= asset_path('On.png') %>");
+    $(".sharing-hint").text("sharing location");
   } else {
     $(".add_location").attr("src", "<%= asset_path('Off.png') %>");
+    $(".sharing-hint").text("not sharing location");
   }
 };
 </script>
@@ -72,6 +74,7 @@ function toggleLocation() {
       
     <% elsif controller.action_name == 'show' %>
       <p class="groups-show"><%=  @groupchat.topic %></p>
+      <p class="sharing-hint">not sharing location</p>
       <%= link_to edit_user_registration_path(current_user) do %>
         <%= image_tag "Settings_2x.png", class: "account_icon" %>
       <% end %>
