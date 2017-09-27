@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() {
   groupchatId = $('input#message_groupchat_id').val();
-  locations = {};
+  var locations = {};
   var map = L.map('map');
   var bounds = [];
   // load a tile layer
