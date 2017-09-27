@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function() {
         bounds = Object.values(locations);
         
         var vals = Object.keys(locations).map(function (key) {
-            return locations[key];
+            return locations[key].getLatLng();
         });
 
         alert(vals);
