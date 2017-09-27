@@ -379,21 +379,33 @@ input {
 	line-height: 16px;
 }
 .groups-show {
-	position:absolute;
-	left: 48px;
-	bottom: 20px;
+  position:absolute;
+  left: 48px;
+  bottom: 20px;
   right: 140px;
-	height: 20px;
-	margin: 0;
-	color: #8ABE1F;
-	font-family: Roboto;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 16px;
+  height: 20px;
+  margin: 0;
+  color: #8ABE1F;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
   white-space: nowrap;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.sharing-hint {
+  position: absolute;
+  display: block;
+  left: 48px;
+  bottom: 14px;
+  margin: 0;
+  height: 12px;
+  color: rgba(0,0,0,0.5);
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 .container {
@@ -509,11 +521,10 @@ p.log-in-helper {
     top: 56px; 
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.12), 0 4px 4px 0 rgba(0,0,0,0.24);								
   }
-  
-	#messages {
-		top: 100px;
-    		width: 100%;
-	}
+  #messages {
+    top: 100px;
+    width: 100%;
+  }
 }
 
 .outer {
