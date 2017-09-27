@@ -15,16 +15,13 @@ $(document).on('turbolinks:load', function() {
         } else {
           locations[data.user].setLatLng(latlng).update();
         }
-        bounds = Object.values(locations);
         
-        var vals = Object.keys(locations).map(function (key) {
+        bounds = Object.keys(locations).map(function (key) {
             return locations[key].getLatLng();
         });
-
-        alert(vals);
-        alert(bounds);
-        map.fitBounds(vals);
-        map.panToBounds(vals);
+        
+        map.fitBounds(bounds);
+        map.panToBounds(bounds);
         return;
       } else {
         $("#messages").removeClass('hidden');
