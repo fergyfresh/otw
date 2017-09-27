@@ -16,7 +16,12 @@ $(document).on('turbolinks:load', function() {
           locations[data.user].setLatLng(latlng).update();
         }
         bounds = Object.values(locations);
-        alert(locations);
+        
+        var vals = Object.keys(locations).map(function (key) {
+            return locations[key];
+        });
+
+        alert(vals);
         alert(bounds);
         map.fitBounds(bounds);
         map.panToBounds(bounds);
