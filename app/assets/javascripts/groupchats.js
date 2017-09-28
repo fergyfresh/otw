@@ -11,8 +11,9 @@ function submitNewMessage(){
         return false;
      }
   });
-  $('input.send_icon').click(function() {
+  $('.send_icon').click(function() {
     $('[data-send="message"]').click();
     $('[data-textarea="message"]').val("");
+    $('#message_content').val("");
   });
 }
