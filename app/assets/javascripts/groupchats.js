@@ -15,5 +15,6 @@ function submitNewMessage(){
     $('[data-send="message"]').click();
     $('[data-textarea="message"]').val("");
     $('#message_content').val("");
+    return false;
   });
 }
