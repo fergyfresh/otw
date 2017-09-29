@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', function() {
   var map = L.map('map');
   var bounds = [];
   // load a tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 17}).addTo(map);
   
   App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
     received: function(data) {
@@ -20,8 +20,8 @@ $(document).on('turbolinks:load', function() {
             return locations[key].getLatLng();
         });
         
-        map.fitBounds(bounds);
-        map.panToBounds(bounds);
+        map.fitBounds(bounds, {padding: [70, 70});
+        map.panToBounds(bounds, {padding: [70, 70});
         return;
       } else {
         $("#messages").removeClass('hidden');
