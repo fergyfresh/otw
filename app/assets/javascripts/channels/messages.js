@@ -20,8 +20,8 @@ $(document).on('turbolinks:load', function() {
             return locations[key].getLatLng();
         });
         
-        map.fitBounds(bounds, {padding: [70, 70});
-        map.panToBounds(bounds, {padding: [70, 70});
+        map.fitBounds(bounds, {padding: [70, 70]});
+        map.panToBounds(bounds, {padding: [70, 70]});
         return;
       } else {
         $("#messages").removeClass('hidden');
