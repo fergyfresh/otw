@@ -1,4 +1,8 @@
 <script>
+$(document).on('turbolinks:load', function() {  
+  getLocation();
+});
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -13,7 +17,6 @@ var options = {
   timeout: 5000,
   maximumAge: 100
 };	
-getLocation();
   
 function getLocation() {
   if (navigator.geolocation && $(".add_location").attr("src") == "<%= asset_path('On.png') %>") {
@@ -38,6 +41,9 @@ function toggleLocation() {
   if ( $(".add_location").attr("src") == "<%= asset_path('Off.png') %>" ) {
     $(".add_location").attr("src", "<%= asset_path('On.png') %>");
     $(".sharing-hint").text("sharing location");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, error, options);
+    }
   } else {
     $(".add_location").attr("src", "<%= asset_path('Off.png') %>");
     $(".sharing-hint").text("not sharing location");
