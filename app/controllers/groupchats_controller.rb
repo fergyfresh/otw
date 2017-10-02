@@ -17,7 +17,7 @@ class GroupchatsController < ApplicationController
   def destroy
     @groupchat = Groupchat.find_by(slug: params[:slug])
     @groupchat.destroy
-    redirect_to root_path
+    redirect_to authenticated_root
   end    
 
   def create
