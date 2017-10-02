@@ -21,7 +21,7 @@ class GroupchatsController < ApplicationController
   end    
 
   def create
-    params[:groupchat][:user_ids] = params[:groupchat][:user_ids][0].split(',').insert(0, current_user)
+    params[:groupchat][:user_ids] = params[:groupchat][:user_ids][0].split(',')
     @groupchat = Groupchat.new(groupchat_params)
 
     if @groupchat.save
