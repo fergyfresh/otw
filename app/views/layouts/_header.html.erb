@@ -81,7 +81,7 @@ function toggleLocation() {
     <% elsif controller.action_name == 'show' %>
       <p class="groups-show"><%=  @groupchat.topic %></p>
       <p class="sharing-hint">not sharing location</p>
-      <%= link_to edit_user_registration_path(current_user) do %>
+      <%= link_to edit_groupchat_path(@groupchat) do %>
         <%= image_tag "Settings_2x.png", class: "account_icon" %>
       <% end %>
       <%= link_to "javascript:toggleLocation()" do %>
