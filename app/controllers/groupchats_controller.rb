@@ -13,6 +13,12 @@ class GroupchatsController < ApplicationController
   def edit
     @groupchat = Groupchat.find_by(slug: params[:slug])
   end
+  
+  def destroy
+    @groupchat = Groupchat.find_by(slug: params[:slug])
+    @groupchat.destroy
+    redirect_to root_path
+  end    
 
   def create
     params[:groupchat][:user_ids] = params[:groupchat][:user_ids][0].split(',')
