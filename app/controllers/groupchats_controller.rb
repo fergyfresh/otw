@@ -8,7 +8,7 @@ class GroupchatsController < ApplicationController
   def new
     @groupchat = Groupchat.new
     @users = User.where.not(id: current_user)
-    gon.current_user = current_user;
+    gon.current_user = current_user
   end
 
   def edit
@@ -48,7 +48,7 @@ class GroupchatsController < ApplicationController
   def show
     @groupchat = Groupchat.find_by(slug: params[:slug])
     @message = Message.new
-    gon.current_user = current_user;
+    gon.current_user = current_user
   end
 
   private
