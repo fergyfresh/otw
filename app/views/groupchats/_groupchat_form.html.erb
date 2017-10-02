@@ -27,7 +27,7 @@
 <% end %>
 
 <script>
-var user_ids = [];
+var user_ids = [gon.current_user.id];
 var user_names = [];
 var default_string = $("#select_message").text();
 $("#special-select li").click(function(){
