@@ -1,4 +1,7 @@
 <div class="container">
   <%= render partial: 'groupchat_form', locals: {groupchat: @groupchat} %>
+  <% if current_user == @groupchat.users[0] %>
+    <%= link_to "Delete Group", @groupchat, data: { confirm: "Are you sure?" }, method: :delete %>
+  <% end %>
 </div>
 
