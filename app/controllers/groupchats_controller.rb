@@ -8,6 +8,7 @@ class GroupchatsController < ApplicationController
   def new
     @groupchat = Groupchat.new
     @users = User.where.not(id: current_user)
+    gon.current_user = current_user;
   end
 
   def edit
