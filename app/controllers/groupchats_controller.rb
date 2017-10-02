@@ -8,12 +8,10 @@ class GroupchatsController < ApplicationController
   def new
     @groupchat = Groupchat.new
     @users = User.where.not(id: current_user)
-    gon.select_users = []
   end
 
   def edit
     @groupchat = Groupchat.find_by(slug: params[:slug])
-    gon.select_users = @groupchat.users
   end
 
   def create
