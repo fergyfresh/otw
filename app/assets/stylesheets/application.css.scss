@@ -653,9 +653,13 @@ textarea {
   margin-top: 18px;
   vertical-align: middle;
   line-height: 48px;
-  text-indent: 16px;
+  text-indent: 40px;
   border-radius: 2px;
   text-decoration: none;
+  background-image: image-url("delete_group.png");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center left 16px;
 }
   
 
