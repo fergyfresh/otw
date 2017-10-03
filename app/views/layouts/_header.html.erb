@@ -74,7 +74,9 @@ function toggleLocation() {
       <%= link_to 'groupchats/new' do %>
         <%= image_tag "add_group_2x.png", class: "add_group" %>
       <% end %>
-      
+    <% elsif controller.action_name == 'edit' %>
+      <p class="groups-header">Group Settings</p>
+
     <% elsif controller.action_name == 'new' %>
       <p class="groups-header">Create Group</p>
       
