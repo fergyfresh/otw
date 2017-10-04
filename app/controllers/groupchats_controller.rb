@@ -17,9 +17,17 @@ class GroupchatsController < ApplicationController
   
   def destroy
     @groupchat = Groupchat.find_by(slug: params[:slug])
-    @groupchat.destroy
+    if @groupchat.users[0] == current_user
+      @groupchat.destroy
+    end
     redirect_to authenticated_root_url
   end    
+
+  def leave
+    @groupchat = Groupchat.find_by(slug: params[:groupchat_id])
+    @groupchat.users.delete(current_user)
+    redirect_to authenticated_root_url
+  end
 
   def create
     params[:groupchat][:user_ids] = params[:groupchat][:user_ids][0].split(',')
