@@ -661,7 +661,10 @@ textarea {
   background-size: 16px;
   background-position: center left 16px;
 }
-  
+
+.leave-group {
+  background-image: image-url("leave_group.png");
+}
 
 .groupchat-form {
   height: 488px;
