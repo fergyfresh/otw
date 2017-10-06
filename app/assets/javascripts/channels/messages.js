@@ -1,13 +1,12 @@
 var my_connections = [];
-var map = L.map('map');
-// load a tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16}).addTo(map);
 
 $(document).on('turbolinks:load', function() {
   groupchatId = $('input#message_groupchat_id').val();
+  var map = L.map('map');
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16}).addTo(map);
   var locations = {};
   var bounds = [];
-  if (my_connections.indexOf(groupchatId) < 0) {
+  if (my_connections.indexOf(groupchatId) < -1) {
     my_connections.push(groupchatId);
     App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
       received: function(data) {
