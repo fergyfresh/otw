@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function() {
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16}).addTo(map);
   var locations = {};
   var bounds = [];
-  if (my_connections.indexOf(groupchatId) < -1) {
+  if (my_connections.indexOf(groupchatId) < 0) {
     my_connections.push(groupchatId);
     App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
       received: function(data) {
