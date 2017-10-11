@@ -18,7 +18,7 @@ class GroupchatsController < ApplicationController
   def destroy
     @groupchat = Groupchat.find_by(slug: params[:slug])
     if @groupchat.users[0] == current_user
-      @groupchat.destroy_all
+      @groupchat.destroy!
     end
     redirect_to authenticated_root_url
   end    
