@@ -45,6 +45,9 @@ body {
 .selected {
   background-image: image-url("member_added.png");
 }
+.no-select {
+  background-image: none;
+}
 
 .member_label {
   color: rgba(255,255,255,0.6);
