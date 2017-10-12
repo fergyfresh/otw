@@ -3,7 +3,7 @@
         <div class="group-name-format">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <%= label :topic, 'Group Name', class: "mdl-textfield__label", id: "special-label" %>
-            <%= text_field_tag :topic, nil, class: "mdl-textfield__input", id: "special-input" %>
+            <%= text_field_tag :topic, groupchat.topic, class: "mdl-textfield__input", id: "special-input", readonly: true %>
           </div>
           <label class="member_label" for="groupchat_members">Group Members</label>
           <p class="member_list" id="select_message">You do not have permission to edit this group, contact <%= @groupchat.users[0].name %>.</p>
