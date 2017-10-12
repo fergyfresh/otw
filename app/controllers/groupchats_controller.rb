@@ -48,8 +48,11 @@ class GroupchatsController < ApplicationController
   end
 
   def update
-    groupchat = Groupchat.find_by(slug: params[:slug])
-    groupchat.update(groupchat_params)
+    if @groupchat.users[0] == current_user
+      groupchat = Groupchat.find_by(slug: params[:slug])
+      groupchat.update(groupchat_params)
+    end
+
     redirect_to groupchat
   end
 
