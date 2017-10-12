@@ -1,7 +1,13 @@
 <div class="container">
-  <%= render partial: 'groupchat_form', locals: {groupchat: @groupchat} %>
+  <% if current_user == @groupchat.users[0] %>  
+    <%= render partial: 'groupchat_form', locals: {groupchat: @groupchat} %>
+  <% else %>
+    <%= render partial: 'groupchat_settings', locals: {groupchat: @groupchat} %>
+  <% end %>
+
   <%= link_to "Leave Group", groupchat_leave_url(@groupchat), data: { confirm: "You sure you wanna leave this group?" }, method: :put, class: "delete-group leave-group" %>
-  <% if current_user == @groupchat.users[0] %>
+  
+  <% if current_user == @groupchat.users[0] %>
     <%= link_to "Delete Group", groupchat_path(@groupchat), data: { confirm: "You sure you wanna delete this group?" }, method: :delete, class: "delete-group" %>
   <% end %>
 </div>
