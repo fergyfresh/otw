@@ -50,12 +50,13 @@ class GroupchatsController < ApplicationController
   end
 
   def update
+    params[:groupchat][:user_ids] = params[:groupchat][:user_ids][0].split(',')
     @groupchat = Groupchat.find_by(slug: params[:slug])
     if @groupchat.users[0] == current_user
       @groupchat.update(groupchat_params)
     end
 
-    redirect_to groupchat
+    redirect_to @groupchat
   end
 
   def show
