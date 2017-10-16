@@ -33,9 +33,20 @@
 <% end %>
 
 <script>
-var user_ids = [gon.current_user.id.toString()];
-var user_names = [];
+var user_ids;
+var user_names;
 var default_string = $("#select_message").text();
+if (gon.ids === undefined) {
+  user_ids = [gon.current_user.id.toString()];
+  user_names = [];
+} else {
+  user_ids = gon.ids;
+  user_names = gon.names;
+  $("#select_message").text(user_names.join(", "));
+  $("#groupchat_user_ids").val(user_ids);
+}
+
+
 $("#special-select li").click(function(){
   var index = user_ids.indexOf($(this).attr("value"));
   var nindex = user_names.indexOf($(this).text());
