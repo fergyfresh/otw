@@ -15,9 +15,15 @@
           <ul id="special-select">
             <%= f.hidden_field :user_ids, { multiple: true, value: [] } %>
             <% User.where.not(id:current_user).each do |user| %>
-              <li class="groupmember-select" id=<%= user.id %> value=<%= user.id %>>
-                <%= user.name %>
-              </li>
+              <% if groupchat.users.include?(user) %>
+                <li class="groupmember-select selected" id=<%= user.id %> value=<%= user.id %>>
+                  <%= user.name %>
+                </li>
+              <% else %>
+                <li class="groupmember-select" id=<%= user.id %> value=<%= user.id %>>
+                  <%= user.name %>
+                </li>
+              <% end %>
             <% end %>
           </ul>
         </div>
