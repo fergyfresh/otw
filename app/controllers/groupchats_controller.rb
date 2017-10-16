@@ -13,6 +13,8 @@ class GroupchatsController < ApplicationController
 
   def edit
     @groupchat = Groupchat.find_by(slug: params[:slug])
+    gon.ids = @groupchat.users.pluck(:id).map(&:to_s)
+    gon.names = @groupchat.users.pluck(:name).map(&:to_s)
   end
   
   def destroy
