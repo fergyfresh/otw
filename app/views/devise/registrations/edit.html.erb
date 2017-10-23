@@ -17,8 +17,8 @@
   <% end %>
 
   <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
+    <%= f.label :password, "New Password (if you want to change it)", class: "mdl-textfield__label hint-text depad-label" %>
     <%= f.password_field :password, autocomplete: "off", class: "mdl-textfield__input line" %>
-    <%= f.label :password, "New Password (if you want to change it)", class: "mdl-textfield__label hint-text depad-label" %>
   </div>
 
   <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
