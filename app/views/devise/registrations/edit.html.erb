@@ -18,21 +18,17 @@
 
   <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
     <%= f.password_field :password, autocomplete: "off", class: "mdl-textfield__input line" %>
-    <%= f.label :password, "Password (skip if you don't want to change it)", class: "mdl-textfield__label hint-text depad-label" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+    <%= f.label :password, "New Password (if you want to change it)", class: "mdl-textfield__label hint-text depad-label" %>
   </div>
 
   <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "mdl-textfield__input line" %>
-    <%= f.label :password_confirmation, class: "mdl-textfield__label hint-text depad-label" %><br />
+    <%= f.label :password_confirmation, "New Password Confirmation", class: "mdl-textfield__label hint-text depad-label" %><br />
   </div>
 
   <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
     <%= f.password_field :current_password, autocomplete: "off", class: "mdl-textfield__input line" %>
-    <%= f.label :current_password, "Current Password (if changes are made to name/email)", class: "mdl-textfield__input line" %>    
+    <%= f.label :current_password, "Current Password (for changes to name/email)", class: "mdl-textfield__input line" %>    
   </div>
 
   <div class="actions">
