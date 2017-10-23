@@ -301,6 +301,18 @@ input {
 	-webkit-appearance: none;
 }
 
+.delete-button {
+	display: inline-block;
+	margin-left: 16px;
+	color: #9E9E9E;
+	background-color: #E0E0E0;
+	height: 32px;
+	width: 140px;
+	border: 1.5px solid #9E9E9E;
+	border-radius: 2px;
+	-webkit-appearance: none;
+}
+
 .fb-text {
 	font-family: Roboto;
 	font-size: 14px;
