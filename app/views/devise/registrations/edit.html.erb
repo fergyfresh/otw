@@ -3,13 +3,13 @@
   <%= devise_error_messages! %>
 
   <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
-    <%= f.text_field :name, class: "mdl-textfield__label hint-text depad-label" %>
-    <%= f.label :name, class: "mdl-textfield__input line" %>    
+    <%= f.text_field :name, class: "mdl-textfield__input line" %>
+    <%= f.label :name, class: "mdl-textfield__label hint-text depad-label" %>    
   </div>
   
   <div class="mdl-login mdl-textfield mdl-js-textfield mdl-textfield--floating-label nopad">
-    <%= f.email_field :email, class: "mdl-textfield__label hint-text depad-label" %>
-    <%= f.label :email, class: "mdl-textfield__input line" %>
+    <%= f.email_field :email, class: "mdl-textfield__input line" %>
+    <%= f.label :email, class: "mdl-textfield__label hint-text depad-label" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
