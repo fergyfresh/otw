@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function() {
 
   var locations = {};
   var bounds = [];
-  if (my_connections.indexOf(groupchatId) < 0) {
+  if (groupchatId !== undefined && my_connections.indexOf(groupchatId) < 0) {
     var map = L.map('map');
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16}).addTo(map);
 
