@@ -1,5 +1,3 @@
-var my_connections = [];
-
 $(document).on('turbolinks:load', function() {
   groupchatId = $('input#message_groupchat_id').val();
 
@@ -10,10 +8,6 @@ $(document).on('turbolinks:load', function() {
     var map = L.map('map');
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16}).addTo(map);
     App.cable.subscriptions.remove({channel: 'MessagesChannel', groupchat_id: groupchatId});
-  }
-
-  if (my_connections.indexOf(groupchatId) < 0) {
-    my_connections.push(groupchatId);
     App.messages = App.cable.subscriptions.create({channel: 'MessagesChannel', groupchat_id: groupchatId}, {
       received: function(data) {
         var latlng = data.message.split(";").slice(1, 3);
