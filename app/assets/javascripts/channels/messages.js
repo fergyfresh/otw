@@ -9,6 +9,7 @@ $(document).on('turbolinks:load', function() {
   if (groupchatId !== undefined) {
     var map = L.map('map');
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16}).addTo(map);
+    App.cable.subscriptions.remove({channel: 'MessagesChannel', groupchat_id: groupchatId});
   }
 
   if (my_connections.indexOf(groupchatId) < 0) {
