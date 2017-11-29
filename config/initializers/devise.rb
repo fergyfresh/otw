@@ -16,7 +16,7 @@ Devise.setup do |config|
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   if Rails.env.production?
-    config.omniauth :amazon, 'amzn1.application-oa2-client.c603b128eb544ae18e2439cafac68e29', '456b3daa10015009dd0ce94bd204ee4c38e06ebd1af47f242d590434f8efe94f', callback_url: "https://intense-lake-76864.herokuapp.com/users/auth/amazon/callback", scope: 'profile'
+    config.omniauth :amazon, 'amzn1.application-oa2-client.c603b128eb544ae18e2439cafac68e29', '456b3daa10015009dd0ce94bd204ee4c38e06ebd1af47f242d590434f8efe94f', callback_url: "https://intense-lake-76864.herokuapp.com/users/auth/amazon/callback"
   else
     config.omniauth :amazon, 'amzn1.application-oa2-client.c603b128eb544ae18e2439cafac68e29', '456b3daa10015009dd0ce94bd204ee4c38e06ebd1af47f242d590434f8efe94f', callback_url: "http://localhost:3000/users/auth/amazon/callback"
   end
