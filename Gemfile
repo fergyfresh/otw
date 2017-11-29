@@ -31,7 +31,7 @@ gem 'redis', '~> 3.0'
 
 gem 'gon'
 gem 'devise'
-gem 'omniauth-facebook'
+gem 'omniauth-amazon'
 gem 'pundit'
 gem 'active_model_serializers'
 gem 'rack-cors'

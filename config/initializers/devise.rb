@@ -16,13 +16,9 @@ Devise.setup do |config|
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
 	if Rails.env.production?
-		config.omniauth :facebook, "1171545116198339", "009c6bbd685c863574cf8f5714ea5fe3", 	
-						        callback_url: "https://www.pickbillyup.com/users/auth/facebook/callback", 
-                    scope: 'email', info_fields: 'email, first_name, last_name'
 	else	
-		config.omniauth :facebook, "1171545116198339", "009c6bbd685c863574cf8f5714ea5fe3", 
-						        callback_url: "http://localhost:3000/users/auth/facebook/callback"
-	end
+    config.omniauth :amazon, 'amzn1.application-oa2-client.c603b128eb544ae18e2439cafac68e29', '456b3daa10015009dd0ce94bd204ee4c38e06ebd1af47f242d590434f8efe94f', callback_url: "http://localhost:3000/users/auth/amazon/callback"
+  end
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
